@@ -1,0 +1,15 @@
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\bin\Debug\net6.0\BusinessLogic.deps.json
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\bin\Debug\net6.0\BusinessLogic.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\bin\Debug\net6.0\BusinessLogic.pdb
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\refint\BusinessLogic.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.pdb
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\ref\BusinessLogic.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\obj\Debug\net6.0\BusinessLogic.csproj.CopyComplete
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\bin\Debug\net6.0\Domain.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\BusinessLogic\bin\Debug\net6.0\Domain.pdb

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Cultura_New.props" />
+</Project>

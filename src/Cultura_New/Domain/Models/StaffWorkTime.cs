@@ -1,0 +1,14 @@
+﻿namespace Domain.Models
+{
+    public partial class StaffWorkTime
+    {
+        public int WorkTimeId { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public int EmployeeId { get; set; }
+        public int? EventId { get; set; }
+
+        public virtual Employee Employee { get; set; } = null!;
+        public virtual Event? Event { get; set; }
+    }
+}
