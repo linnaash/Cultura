@@ -80,3 +80,7 @@ C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Кур
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Domain.pdb
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Humanizer.dll
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Cultura_New.xml
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Mapster.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\bin\Debug\net6.0\Mapster.Core.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Курсовая_Ларионов\Cultura_New\Cultura_New\obj\Debug\net6.0\Cultura_New.xml

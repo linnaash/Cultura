@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "93bxFj0lhg0pzkMlt8urwKdqRI0Can+UPJM/JtIzAfSpnBlXpwB431ySUIYR+gfVezkMzTqXr4CKbH/qkT9jkQ==",
+  "dgSpecHash": "X+eAwqSDfK5tRvJmeXPUXgtKFz7qdSF4ZBHy0JNqDRFqM4K0XfQ/+YKkrTeUZ/Ky9+k7Mr0VLn+jlPVGIIkxPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Курсовая_Ларионов\\Cultura_New\\Cultura_New\\Cultura_New.csproj",
+  "projectFilePath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\Cultura_New\\Cultura_New.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mvm\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\mvm\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\mvm\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\mvm\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\mvm\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.7\\microsoft.data.sqlclient.2.1.7.nupkg.sha512",
     "C:\\Users\\mvm\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

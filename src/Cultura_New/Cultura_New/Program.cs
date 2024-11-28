@@ -4,6 +4,7 @@ using Domain.Models;
 using DataAccess.Wrapper;
 using Microsoft.EntityFrameworkCore;
 using DataAccess;
+using System.Reflection;
 
 namespace Cultura_New
 {
@@ -42,8 +43,12 @@ namespace Cultura_New
                         Url = new Uri("https://example.com/license")
                     }
                 });
+                var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
             });
-
+            
+           
+            
 
             var app = builder.Build();
 
