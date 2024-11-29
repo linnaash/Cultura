@@ -1,0 +1,86 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: gitlab
+    restart: always
+    hostname: gitlab.local
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.local'
+        gitlab_rails['initial_root_password'] = 'SuperSecretPassword'
+    volumes:
+      - gitlab_config:/etc/gitlab
+      - gitlab_logs:/var/log/gitlab
+      - gitlab_data:/var/opt/gitlab
+
+  mattermost:
+    image: mattermost/mattermost-enterprise-edition:latest
+    container_name: mattermost
+    restart: always
+    ports:
+      - "8065:8065"
+    environment:
+      MM_SERVICESETTINGS_SITEURL: "http://localhost:8065"
+      MM_SQLSETTINGS_DRIVERNAME: "postgres"
+      MM_SQLSETTINGS_DATASOURCE: "postgres://mmuser:mostest@mattermost_db:5432/mattermost?sslmode=disable"
+    depends_on:
+      - mattermost_db
+    volumes:
+      - mattermost_config:/mattermost/config
+      - mattermost_logs:/mattermost/logs
+      - mattermost_data:/mattermost/data
+
+  mattermost_db:
+    image: postgres:13-alpine
+    container_name: mattermost_db
+    restart: always
+    environment:
+      POSTGRES_USER: mmuser
+      POSTGRES_PASSWORD: mostest
+      POSTGRES_DB: mattermost
+    volumes:
+      - mattermost_db:/var/lib/postgresql/data
+
+  osu-web:
+    image: thepoon/osu-web:latest
+    container_name: osu-web
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: "local"
+      DB_HOST: "osu_db"
+      DB_DATABASE: "osu"
+      DB_USERNAME: "osu"
+      DB_PASSWORD: "osu"
+    depends_on:
+      - osu_db
+    volumes:
+      - osu_web:/app
+
+  osu_db:
+    image: mysql:5.7
+    container_name: osu_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: osu
+      MYSQL_USER: osu
+      MYSQL_PASSWORD: osu
+    volumes:
+      - osu_db:/var/lib/mysql
+
+volumes:
+  gitlab_config:
+  gitlab_logs:
+  gitlab_data:
+  mattermost_config:
+  mattermost_logs:
+  mattermost_data:
+  mattermost_db:
+  osu_web:
+  osu_db:
