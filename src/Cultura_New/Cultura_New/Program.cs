@@ -15,8 +15,7 @@ namespace Cultura_New
             var builder = WebApplication.CreateBuilder(args);
             //дл€ автоматического создани€ экземпл€ра контекста базы при каждом вызове/запуске
             builder.Services.AddDbContext<Cultura_bdContext>(
-                options=>options.UseSqlServer(
-                    "Server=DESKTOP-HD64L82;Database=TestDb;User Id=AdminLogin;Password=12345;"));
+                options => options.UseSqlServer(builder.Configuration["ConnectionString"]));
             //Scoped означает, что один экземпл€р объекта будет использоватьс€ на каждый HTTP-запрос. Ёто удобно, потому что
             //репозитории часто работают с одним контекстом базы данных, который должен быть "раздел€емым" в пределах одного
             //запроса.
@@ -51,7 +50,12 @@ namespace Cultura_New
             
 
             var app = builder.Build();
-
+            using(var scope = app.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                var context=services.GetRequiredService<Cultura_bdContext>();
+                context.Database.Migrate();
+            }
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

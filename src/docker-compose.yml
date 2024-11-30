@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=Server=db;Database=MyTest;User=sa;Password=StrongPassword123!;MultipleActiveResultSets=true
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+    networks:
+      - my_network
+    command: ["sh", "-c", "sleep 30 && dotnet Cultura_New.dll"]
+    container_name: webapi_container 
+
+  db:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+      - "MSSQL_SA_PASSWORD=StrongPassword123!"
+      - "ACCEPT_EULA=Y"
+    container_name: mssql
+    ports:
+      - "1433:1433"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

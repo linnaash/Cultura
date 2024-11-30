@@ -63,7 +63,7 @@
         </member>
         <member name="M:Cultura_New.Controllers.UserController.Delete(System.Int32)">
             <summary>
-            Удалить пользователя
+            Удаление пользователя
             </summary>
             <param name="id">Идентификатор пользователя</param>
             <returns>Результат выполнения операции</returns>
