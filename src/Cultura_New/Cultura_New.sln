@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{55830458-89C8-4348-9596-E1FB9A119B2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp-empty1", "BlazorApp-empty1\BlazorApp-empty1.csproj", "{1D44945D-CD36-4CB2-BF2B-71C73357808F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D44945D-CD36-4CB2-BF2B-71C73357808F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D44945D-CD36-4CB2-BF2B-71C73357808F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D44945D-CD36-4CB2-BF2B-71C73357808F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D44945D-CD36-4CB2-BF2B-71C73357808F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
