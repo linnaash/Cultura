@@ -50,6 +50,7 @@ namespace Cultura_New
             
 
             var app = builder.Build();
+            app.UseCors("AllowSpecificOrigin");
             builder.WebHost.UseUrls("http://+:80");
             using (var scope = app.Services.CreateScope())
             {
