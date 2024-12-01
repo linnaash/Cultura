@@ -63,8 +63,8 @@ namespace Cultura_New
                 app.UseSwaggerUI();
             }
             app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214/", })
-            .AllowAnyHeader()
-            .AllowAnyMethod());
+                            .AllowAnyHeader()
+                            .AllowAnyMethod());
             
 
             app.UseHttpsRedirection();
