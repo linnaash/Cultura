@@ -50,7 +50,7 @@ namespace Cultura_New
             
 
             var app = builder.Build();
-            builder.WebHost.UseUrls("http://+:80");
+            //builder.WebHost.UseUrls("http://+:80");
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
