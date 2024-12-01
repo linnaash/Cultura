@@ -11,12 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{55830458-89C8-4348-9596-E1FB9A119B2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp-empty1.Server", "BlazorApp-empty1\Server\BlazorApp-empty1.Server.csproj", "{B95D4AF0-A325-4274-9FAD-0FD2FB6626E7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp-empty1.Client", "BlazorApp-empty1\Client\BlazorApp-empty1.Client.csproj", "{C2B7B341-8A6E-4F4C-80CE-52E6931D3474}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp-empty1.Shared", "BlazorApp-empty1\Shared\BlazorApp-empty1.Shared.csproj", "{F039868F-7068-41DF-97DE-4666EBDD2D63}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,18 +33,6 @@ Global
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55830458-89C8-4348-9596-E1FB9A119B2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B95D4AF0-A325-4274-9FAD-0FD2FB6626E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B95D4AF0-A325-4274-9FAD-0FD2FB6626E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B95D4AF0-A325-4274-9FAD-0FD2FB6626E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B95D4AF0-A325-4274-9FAD-0FD2FB6626E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2B7B341-8A6E-4F4C-80CE-52E6931D3474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2B7B341-8A6E-4F4C-80CE-52E6931D3474}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2B7B341-8A6E-4F4C-80CE-52E6931D3474}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2B7B341-8A6E-4F4C-80CE-52E6931D3474}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F039868F-7068-41DF-97DE-4666EBDD2D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F039868F-7068-41DF-97DE-4666EBDD2D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F039868F-7068-41DF-97DE-4666EBDD2D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F039868F-7068-41DF-97DE-4666EBDD2D63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
