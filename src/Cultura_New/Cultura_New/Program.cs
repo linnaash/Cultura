@@ -50,7 +50,6 @@ namespace Cultura_New
             
 
             var app = builder.Build();
-            //builder.WebHost.UseUrls("http://+:80");
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -62,7 +61,7 @@ namespace Cultura_New
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214/", })
+            app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
                             .AllowAnyHeader()
                             .AllowAnyMethod());
             
