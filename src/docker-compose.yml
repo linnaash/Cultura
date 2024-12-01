@@ -14,9 +14,6 @@ services:
       - "80:80"
     depends_on:
       - db
-    networks:
-      - my_network
-    command: ["sh", "-c", "sleep 30 && dotnet Cultura_New.dll"]
     container_name: webapi_container 
 
   db:
@@ -27,9 +24,3 @@ services:
     container_name: mssql
     ports:
       - "1433:1433"
-    networks:
-      - my_network
-
-networks:
-  my_network:
-    driver: bridge
