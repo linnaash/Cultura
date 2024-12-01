@@ -50,7 +50,6 @@ namespace Cultura_New
             
 
             var app = builder.Build();
-            app.UseCors("AllowSpecificOrigin");
             builder.WebHost.UseUrls("http://+:80");
             using (var scope = app.Services.CreateScope())
             {
@@ -63,17 +62,10 @@ namespace Cultura_New
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowSpecificOrigin", policy =>
-                {
-                    policy.WithOrigins("https://localhost:7214")
-                          .AllowAnyHeader()
-                          .AllowAnyMethod();
-                });
-            });
-
-
+            app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214/", })
+                            .AllowAnyHeader()
+                            .AllowAnyMethod());
+            
 
             app.UseHttpsRedirection();
 
