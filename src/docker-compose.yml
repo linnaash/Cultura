@@ -11,7 +11,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionString=Server=db;Database=MyTest;User=sa;Password=StrongPassword123!;MultipleActiveResultSets=true
     ports:
-      - "80:80"
+      - "5000:80"
     depends_on:
       - db
     container_name: webapi_container 
