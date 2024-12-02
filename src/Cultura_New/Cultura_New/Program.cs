@@ -51,7 +51,7 @@ namespace Cultura_New
             {
                 options.AddPolicy("AllowSpecificOrigin", policy =>
                 {
-                    policy.WithOrigins("https://localhost:7214") // Указан адрес клиента
+                    policy.WithOrigins("http://localhost:5278/") // Указан адрес клиента
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
