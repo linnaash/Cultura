@@ -34,7 +34,7 @@
         var client = new HttpClient();
         client.BaseAddress = new Uri("https://culturaapi-oc5oxjby.b4a.run/swagger/");
 
-        result = await client.GetFromJsonAsync<User[]>("api/Users");
+        result = await client.GetFromJsonAsync<User[]>("api/User");
         return;
     }
 }
