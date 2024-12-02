@@ -45,15 +45,15 @@ namespace Cultura_New
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
             });
-            
-           
-            
+
+
+
 
             var app = builder.Build();
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var context=services.GetRequiredService<Cultura_bdContext>();
+                var context = services.GetRequiredService<Cultura_bdContext>();
                 context.Database.Migrate();
             }
             if (app.Environment.IsDevelopment())
@@ -61,8 +61,7 @@ namespace Cultura_New
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseCors(builder => builder
-    .WithOrigins("https://localhost:7214")
+            app.UseCors(builder => builder.WithOrigins(new [] {"https://localhost:7214", })
     .AllowAnyHeader()
     .AllowAnyMethod());
 
