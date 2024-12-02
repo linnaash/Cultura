@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogic", "BusinessLogic\BusinessLogic.csproj", "{55830458-89C8-4348-9596-E1FB9A119B2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp-empty1", "BlazorApp-empty1\BlazorApp-empty1.csproj", "{1D44945D-CD36-4CB2-BF2B-71C73357808F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp-empty1", "BlazorApp-empty1\BlazorApp-empty1.csproj", "{1D44945D-CD36-4CB2-BF2B-71C73357808F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
