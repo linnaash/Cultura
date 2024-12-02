@@ -45,9 +45,18 @@ namespace Cultura_New
                 var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
             });
-            
-           
-            
+
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", policy =>
+                {
+                    policy.WithOrigins("https://localhost:7214") // Указан адрес клиента
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
+
 
             var app = builder.Build();
             using (var scope = app.Services.CreateScope())
@@ -61,11 +70,7 @@ namespace Cultura_New
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseCors(builder => builder.WithOrigins(new[] { "http://localhost:7214", })
-                            .AllowAnyHeader()
-                            .AllowAnyMethod());
-            
-
+            app.UseCors("AllowSpecificOrigin");
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
