@@ -46,23 +46,21 @@ namespace Cultura_New
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
             });
 
-
-
-
             var app = builder.Build();
             using (var scope = app.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdContext>();
                 context.Database.Migrate();
-                if (app.Environment.IsDevelopment())
+                app.UseSwagger();
+                app.UseSwaggerUI(options =>
                 {
-                    app.UseSwagger();
-                    app.UseSwaggerUI();
-                }
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
+                    options.RoutePrefix = string.Empty; // Это делает Swagger доступным по адресу /
+                });
                 app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
-    .AllowAnyHeader()
-    .AllowAnyMethod());
+                 .AllowAnyHeader()
+                 .AllowAnyMethod());
 
 
                 app.UseHttpsRedirection();
