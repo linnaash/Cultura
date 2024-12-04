@@ -67,8 +67,7 @@ namespace Cultura_New
                 }
                 app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
     .AllowAnyHeader()
-    .AllowAnyMethod()
-    .AllowAnyOrigin());
+    .AllowAnyMethod());
 
 
                 app.UseHttpsRedirection();
