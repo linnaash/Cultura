@@ -55,13 +55,16 @@ namespace Cultura_New
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdContext>();
                 context.Database.Migrate();
-            }
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-            app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
+                if (app.Environment.IsDevelopment())
+                {
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
+                }
+                else
+                {
+                    app.UseHsts();
+                }
+                app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
     .AllowAnyHeader()
     .AllowAnyMethod()
     .AllowAnyOrigin());
