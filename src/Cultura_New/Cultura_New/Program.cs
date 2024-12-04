@@ -61,11 +61,10 @@ namespace Cultura_New
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            app.UseCors(builder => builder
-     .WithOrigins("https://culturaapi-oc5oxjby.b4a.run/swagger/", "https://localhost:7214/")
-     .AllowAnyHeader()
-     .AllowAnyMethod());
-
+            app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowAnyOrigin());
 
 
             app.UseHttpsRedirection();
