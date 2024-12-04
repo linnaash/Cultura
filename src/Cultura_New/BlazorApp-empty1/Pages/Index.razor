@@ -32,7 +32,7 @@
         CurrentTime = date.ToShortTimeString();
 
         var client = new HttpClient();
-        client.BaseAddress = new Uri("https://culturaapi-oc5oxjby.b4a.run/");
+        client.BaseAddress = new Uri("https://culturaapi-oc5oxjby.b4a.run/api/User");
 
         result = await client.GetFromJsonAsync<User[]>("api/Users");
         return;
