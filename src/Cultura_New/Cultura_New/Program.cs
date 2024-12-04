@@ -52,12 +52,11 @@ namespace Cultura_New
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdContext>();
                 context.Database.Migrate();
-                app.UseSwagger();
-                app.UseSwaggerUI(options =>
+                if (app.Environment.IsDevelopment())
                 {
-                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-                    options.RoutePrefix = string.Empty; // Это делает Swagger доступным по адресу /
-                });
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
+                }
                 app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
                  .AllowAnyHeader()
                  .AllowAnyMethod());
