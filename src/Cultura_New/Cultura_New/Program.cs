@@ -62,6 +62,7 @@ namespace Cultura_New
                 }
                 else
                 {
+
                     app.UseHsts();
                 }
                 app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214", })
@@ -70,14 +71,15 @@ namespace Cultura_New
     .AllowAnyOrigin());
 
 
-            app.UseHttpsRedirection();
+                app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+                app.UseAuthorization();
 
 
-            app.MapControllers();
+                app.MapControllers();
 
-            app.Run();
+                app.Run();
+            }
         }
     }
 }
