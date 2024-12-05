@@ -6,6 +6,6 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://clientforculturawebapi-y5bxc2o4.b4a.run/") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://culturaapi-oc5oxjby.b4a.run/") });
 
 await builder.Build().RunAsync();
