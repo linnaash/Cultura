@@ -823,3 +823,9 @@ C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultur
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net7.0\refint\BlazorApp-empty1.dll
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net7.0\BlazorApp-empty1.pdb
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net7.0\ref\BlazorApp-empty1.dll
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\painter.png
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\web-api.png
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\app-development.png
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\development.png
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\database_.png
+C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\bin\Debug\net7.0\wwwroot\Resources\house.png
