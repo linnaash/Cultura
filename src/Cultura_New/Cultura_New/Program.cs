@@ -3,8 +3,8 @@ using BusinessLogic.Services;
 using Domain.Models;
 using DataAccess.Wrapper;
 using Microsoft.EntityFrameworkCore;
-using DataAccess;
 using System.Reflection;
+using DataAccess.Models;
 
 namespace Cultura_New
 {

@@ -1,6 +1,7 @@
 ﻿using Domain.Interfaces;
 using Domain.Models;
 using DataAccess.Repositories;
+using DataAccess.Models;
 namespace DataAccess.Wrapper
 {
     public class RepositoryWrapper : IRepositoryWrapper

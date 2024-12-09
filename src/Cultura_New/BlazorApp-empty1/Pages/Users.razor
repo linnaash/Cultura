@@ -11,9 +11,10 @@
             <thead>
                 <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">CreatedAt</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Birthdate</th>
+                    <th scope="col">Email</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,9 +22,10 @@
                 {
                     <tr>
                         <th scope="row">@user.UserId</th>
-                        <td>@user.Username</td>
-                        <td>@user.Role</td>
-                        <td>@user.CreatedAt</td>
+                        <td>@user.Firstname</td>
+                        <td>@user.Lastname</td>
+                        <td>@user.BirthDate.ToShortDateString()</td>
+                        <td>@user.Email</td
                     </tr>
                 }
             </tbody>
@@ -36,11 +38,15 @@
     public class User
     {
         public int UserId { get; set; }
-        public string Username { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
-        public string Role { get; set; } = null!;
+        public string Firstname { get; set; } = null;
+        public string Lastname { get; set; } = null;
+        public string Middlename { get; set; } = null;
+        public DateTime BirthDate { get; set; }
+        public string Login { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Password { get; set; } = null!;
         public int? EmployeeId { get; set; }
-        public DateTime CreatedAt { get; set; }
+
 
     }
 

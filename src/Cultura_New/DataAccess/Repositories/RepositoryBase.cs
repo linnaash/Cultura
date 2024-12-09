@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces;
+﻿using DataAccess.Models;
+using Domain.Interfaces;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;

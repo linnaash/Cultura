@@ -1,6 +1,6 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-namespace DataAccess
+namespace DataAccess.Models
 {
     public partial class Cultura_bdContext : DbContext
     {
@@ -399,23 +399,18 @@ namespace DataAccess
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.Username, "UQ__Users__536C85E45C3D8BD0")
-                    .IsUnique();
+               
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
-                entity.Property(e => e.CreatedAt)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
+               
 
                 entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
 
-                entity.Property(e => e.PasswordHash).HasMaxLength(255);
 
                 entity.Property(e => e.Role).HasMaxLength(50);
 
-                entity.Property(e => e.Username).HasMaxLength(255);
-
+               
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.EmployeeId)
