@@ -428,7 +428,7 @@ namespace DataAccess.Models
                 entity.Property(e => e.Role)
                     .HasConversion(v => v.ToString(), // Конвертация Enum в строку для базы данных
                      v => (Role)Enum.Parse(typeof(Role), v)) // Конвертация строки обратно в Enum
-                    .HasMaxLength(50)
+                    .HasMaxLength(50);
                     /*.HasDefaultValue(Role.User);*/ // Укажите значение по умолчанию из Enum
 
 
