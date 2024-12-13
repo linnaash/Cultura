@@ -1,5 +1,4 @@
-﻿using Domain.Models;
-
+﻿
 namespace Domain.Interfaces
 {
     public interface IRepositoryWrapper//просто чтобы не писать кучу методов Save для разных сущностей

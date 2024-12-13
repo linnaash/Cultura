@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-using Domain.Models;
+
 
 namespace Domain.Interfaces
 {
@@ -11,7 +11,7 @@ namespace Domain.Interfaces
         Task Create(T entity);
         Task Update(T entity);
         Task Delete(T entity);
-        
+
     }
 
 }

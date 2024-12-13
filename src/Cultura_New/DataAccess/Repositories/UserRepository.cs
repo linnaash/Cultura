@@ -1,14 +1,15 @@
 ﻿using DataAccess.Models;
 using Domain.Interfaces;
+using Domain.Entities;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 
 namespace DataAccess.Repositories
 {
-    public class UserRepository: RepositoryBase<User>,IUserRepository
+    public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public UserRepository(Cultura_bdContext repositoryContext) : base(repositoryContext) // вызываем конструктор родительского класса
+        public UserRepository(Cultura_bdNewContext repositoryContext) : base(repositoryContext) // вызываем конструктор родительского класса
         {
         }
         public async Task<User> GetByIdWithToken(int userId) =>

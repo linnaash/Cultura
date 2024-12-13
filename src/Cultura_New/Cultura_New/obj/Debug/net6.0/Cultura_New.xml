@@ -27,19 +27,20 @@
             Пример запроса:
                 POST /Users
                 {
-                    "username": "example_user",
-                    "passwordHash": "hashed_password",
-                    "role": "Admin",
-                    "employeeId": null
+                    "login": "Alina Eeeee Krut",
+                    "password": "passw167",
+                    "firstname" : "Петров",
+                    "lastname" : "Петров",
+                    "middlename" : "Петрович"
                 }
-            Поле "employeeId" является необязательным. Если не указано, значение будет null.
+                
             </remarks>
             <param name="request">Данные для создания пользователя</param>
             <returns>Результат выполнения операции</returns>
             <response code="201">Пользователь успешно создан</response>
             <response code="400">Ошибка в данных запроса</response>
         </member>
-        <member name="M:Cultura_New.Controllers.UserController.Update(Cultura_New.Contracts.User.UpdateUserRequest)">
+        <member name="M:Cultura_New.Controllers.UserController.Update(System.Int32,Cultura_New.Contracts.User.UpdateUserRequest)">
             <summary>
             Обновление данных пользователя
             </summary>
@@ -47,13 +48,13 @@
             Пример запроса:
                 PUT /Users
                 {
-                    "userId": 1,
-                    "username": "updated_user",
-                    "passwordHash": "updated_hashed_password",
-                    "role": "User",
-                    "employeeId": 2
+                    "login": "Alina Eeeee Krut",
+                    "password": "passw167",
+                    "firstname" : "Петров",
+                    "lastname" : "Петров",
+                    "middlename" : "Петрович"
                 }
-            Поле "employeeId" является необязательным. Если не указано, значение останется null.
+            
             </remarks>
             <param name="request">Обновленные данные пользователя</param>
             <returns>Результат выполнения операции</returns>
