@@ -248,9 +248,9 @@ namespace BusinessLogic.Services
             var account = _mapper.Map<User>(model);
 
             //first registered account is in admin
-            //var isFirstAccount = (await _repositoryWrapper.User.FindAll()).Count == 0;
-            //account.Role = isFirstAccount ? Role.Admin : Role.User;
-            account.Role = Role.User;
+            var isFirstAccount = (await _repositoryWrapper.User.FindAll()).Count == 0;
+            account.Role = isFirstAccount ? Role.Admin : Role.User;
+            //account.Role = Role.User;
             account.Created = DateTime.UtcNow;
             account.Verified = DateTime.UtcNow;
             account.VerificationToken = await generateVerificationToken();

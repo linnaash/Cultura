@@ -429,7 +429,7 @@ namespace DataAccess.Models
                     .HasConversion(v => v.ToString(), // Конвертация Enum в строку для базы данных
                      v => (Role)Enum.Parse(typeof(Role), v)) // Конвертация строки обратно в Enum
                     .HasMaxLength(50)
-                    .HasDefaultValue(Role.User); // Укажите значение по умолчанию из Enum
+                    /*.HasDefaultValue(Role.User);*/ // Укажите значение по умолчанию из Enum
 
 
                 entity.Property(e => e.Updated).HasColumnType("datetime");
