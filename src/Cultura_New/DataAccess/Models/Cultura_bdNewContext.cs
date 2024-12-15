@@ -18,6 +18,7 @@ namespace DataAccess.Models
         {
         }
 
+
         public virtual DbSet<Department> Departments { get; set; } = null!;
         public virtual DbSet<EmergencyPlan> EmergencyPlans { get; set; } = null!;
         public virtual DbSet<Employee> Employees { get; set; } = null!;
