@@ -113,7 +113,11 @@ namespace Cultura_New
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdNewContext>();
                 await context.Database.MigrateAsync();
-                context.Database.Migrate();
+                if (app.Environment.IsDevelopment())
+                {
+                    app.UseSwagger();
+                    app.UseSwaggerUI();
+                }
                 app.UseCors(builder => builder.WithOrigins(new[] { "https://clientforculturawebapi-y5bxc2o4.b4a.run" })
                  .AllowAnyHeader()
                  .AllowAnyMethod());
