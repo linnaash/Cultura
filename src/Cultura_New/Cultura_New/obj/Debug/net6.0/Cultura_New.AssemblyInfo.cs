@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cultura_New")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44593f1fd579d3b04eaec6f5c1f16a1b8bd9a046")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0de59a057709f40023720275ad7aed77a2426941")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cultura_New")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cultura_New")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
