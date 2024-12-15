@@ -10,7 +10,7 @@ namespace Domain.Models
         public int UserId { get; set; }
         public string Firstname { get; set; } = null!;
         public string Lastname { get; set; } = null!;
-        public string? Middlename { get; set; }
+        public string? Middlename { get; set; } = null;
         public DateTime BirthDate { get; set; }
         public string Login { get; set; } = null!;
         public string Email { get; set; } = null!;
