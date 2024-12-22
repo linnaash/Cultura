@@ -31,7 +31,7 @@ jobs:
 
     # Проверка форматирования кода
     - name: Check code formatting
-      run: dotnet format src/Cultura_New/Cultura_New.sln --check --verbosity diagnostic
+      run: dotnet format src/Cultura_New/Cultura_New.sln --verify-no-changes --verbosity diagnostic
 
     # Сборка
     - name: Build
