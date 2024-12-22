@@ -21,6 +21,6 @@ jobs:
       with:
         dotnet-version: '6.0'
     - name: Build
-      run: dotnet build src/Cultura_New/ultura_New.sln --configuration Release
+      run: dotnet build src/Cultura_New/Cultura_New.sln --configuration Release
     - name: Test
       run: dotnet test src/Cultura_New/Cultura_New.sln --configuration Release --no-build
