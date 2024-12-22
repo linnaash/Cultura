@@ -35,7 +35,7 @@ jobs:
 
     # Сборка
     - name: Build
-      run: dotnet build src/Cultura_New/Cultura_New.sln --configuration Release
+      run: dotnet format src/Cultura_New/Cultura_New/Cultura_New.csproj --check --verbosity diagnostic
 
     # Тестирование
     - name: Test
