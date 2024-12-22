@@ -2325,23 +2325,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mvm\\.nuget\\packages\\": {},
+    "C:\\Users\\allsc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\mvm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\allsc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mvm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\allsc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2350,18 +2350,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\mvm\\OneDrive\\Рабочий стол\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\Domain\\Domain.csproj"
+            "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\Domain\\Domain.csproj"
             }
           }
         }
@@ -2370,7 +2369,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -2417,7 +2422,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

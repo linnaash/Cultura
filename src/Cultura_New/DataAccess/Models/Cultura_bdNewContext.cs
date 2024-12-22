@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Domain.Models;
-using Domain.Entities;
+using System;
+using System.Collections.Generic;
 
 namespace DataAccess.Models
 {
@@ -41,7 +41,7 @@ namespace DataAccess.Models
         public virtual DbSet<Venue> Venues { get; set; } = null!;
         public virtual DbSet<Volunteer> Volunteers { get; set; } = null!;
 
-      
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -346,7 +346,7 @@ namespace DataAccess.Models
                     .HasDefaultValueSql("(getdate())");
             });
 
-         
+
 
             modelBuilder.Entity<Resource>(entity =>
             {
@@ -413,7 +413,7 @@ namespace DataAccess.Models
 
                 entity.Property(e => e.Firstname).HasMaxLength(255);
 
-                
+
                 entity.Property(e => e.Lastname).HasMaxLength(255);
 
                 entity.Property(e => e.Login).HasMaxLength(255);
@@ -430,7 +430,7 @@ namespace DataAccess.Models
                     .HasConversion(v => v.ToString(), // Конвертация Enum в строку для базы данных
                      v => (Role)Enum.Parse(typeof(Role), v)) // Конвертация строки обратно в Enum
                     .HasMaxLength(50);
-                    /*.HasDefaultValue(Role.User);*/ // Укажите значение по умолчанию из Enum
+                /*.HasDefaultValue(Role.User);*/ // Укажите значение по умолчанию из Enum
 
 
                 entity.Property(e => e.Updated).HasColumnType("datetime");

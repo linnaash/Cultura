@@ -1,11 +1,11 @@
-﻿using Microsoft.Extensions.Options;
-using BusinessLogic.Authorization;
+﻿using BusinessLogic.Authorization;
 using BusinessLogic.Helpers;
-using Domain.Interfaces;
-using MapsterMapper;
 using BusinessLogic.Models.Accounts;
 using Domain.Entities;
+using Domain.Interfaces;
 using Domain.Models;
+using MapsterMapper;
+using Microsoft.Extensions.Options;
 using System.Security.Cryptography;
 
 namespace BusinessLogic.Services

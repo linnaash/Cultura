@@ -1,18 +1,18 @@
-using Domain.Interfaces;
-using BusinessLogic.Services;
-using Domain.Models;
-using DataAccess.Wrapper;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-using DataAccess.Models;
-using BusinessLogic.Helpers;
-using Cultura_New.Authorization;
 using BusinessLogic.Authorization;
-using Microsoft.OpenApi.Models;
+using BusinessLogic.Helpers;
+using BusinessLogic.Services;
+using Cultura_New.Authorization;
+using Cultura_New.Helpers;
+using DataAccess.Models;
+using DataAccess.Wrapper;
+using Domain.Interfaces;
+using Domain.Models;
 using Mapster;
 using MapsterMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 using System.Text.Json.Serialization;
-using Cultura_New.Helpers;
 
 
 namespace Cultura_New
@@ -22,16 +22,16 @@ namespace Cultura_New
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //для автоматического создания экземпляра контекста базы при каждом вызове / запуске
-                        builder.Services.AddDbContext<Cultura_bdNewContext>(
-                            options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
+            //пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ / пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+            builder.Services.AddDbContext<Cultura_bdNewContext>(
+                options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
 
             //// configure strongly typed settings object
             builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-            //Scoped означает, что один экземпляр объекта будет использоваться на каждый HTTP-запрос. Это удобно, потому что
-            //репозитории часто работают с одним контекстом базы данных, который должен быть "разделяемым" в пределах одного
-            //запроса.
+            //Scoped пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ HTTP-пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+            //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
             builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             builder.Services.AddScoped<IUserService, UserService>();
 
@@ -61,16 +61,16 @@ namespace Cultura_New
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "API управления мероприятиями в культурных центрах",
-                    Description = "API для управления мероприятиями, событиями и ресурсами в культурных центрах.",
+                    Title = "API пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
+                    Description = "API пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ.",
                     Contact = new OpenApiContact
                     {
-                        Name = "Команда поддержки API",
+                        Name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ API",
                         Url = new Uri("https://example.com/support")
                     },
                     License = new OpenApiLicense
                     {
-                        Name = "Лицензия на использование API",
+                        Name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ API",
                         Url = new Uri("https://example.com/license")
                     }
                 });

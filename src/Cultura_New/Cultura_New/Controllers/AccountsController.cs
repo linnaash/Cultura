@@ -1,9 +1,9 @@
-﻿using Cultura_New.Authorization;
-using BusinessLogic.Authorization;
+﻿using BusinessLogic.Authorization;
 using BusinessLogic.Models.Accounts;
+using Cultura_New.Authorization;
 using Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
 using Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace Cultura_New.Controllers

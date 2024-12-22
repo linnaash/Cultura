@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Domain.Entities;
+﻿using Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogic.Models.Accounts
 {
@@ -35,7 +35,7 @@ namespace BusinessLogic.Models.Accounts
         public string ConfirmPassword
         {
             get => _confirmPassword;
-            set => _confirmPassword=replaceEmptyWithNull(value);
+            set => _confirmPassword = replaceEmptyWithNull(value);
         }
         private string replaceEmptyWithNull(string value)
         {

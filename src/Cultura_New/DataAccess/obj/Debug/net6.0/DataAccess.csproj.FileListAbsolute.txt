@@ -33,3 +33,21 @@ C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultur
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
 C:\Users\mvm\OneDrive\Рабочий стол\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\DataAccess.runtimeconfig.json
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\DataAccess.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\Domain.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\bin\Debug\net6.0\Domain.pdb
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.csproj.Up2Date
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\DataAccess.genruntimeconfig.cache
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Domain.Entities;
+﻿using Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace BusinessLogic.Models.Accounts
 {
@@ -28,6 +28,6 @@ namespace BusinessLogic.Models.Accounts
         [Required]
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
-        
+
     }
 }

@@ -3,13 +3,13 @@ using BusinessLogic.Helpers;
 using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using System.Text;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using Microsoft.AspNetCore.Mvc;
+using System.Text;
 
 namespace Cultura_New.Authorization
 {

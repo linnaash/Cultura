@@ -8,7 +8,16 @@ namespace Cultura_New.Controllers
     {
         private static List<string> Summaries = new()
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Freezing",
+            "Bracing",
+            "Chilly",
+            "Cool",
+            "Mild",
+            "Warm",
+            "Balmy",
+            "Hot",
+            "Sweltering",
+            "Scorching"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
@@ -34,7 +43,7 @@ namespace Cultura_New.Controllers
         {
             if (index < 0 || index >= Summaries.Count())
             {
-                return BadRequest("Ну чего вы издеваетесь, напишите пож корректный индекс...");
+                return BadRequest("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ...");
 
             }
             Summaries[index] = name;
@@ -45,7 +54,7 @@ namespace Cultura_New.Controllers
         {
             if (index < 0 || index >= Summaries.Count())
             {
-                return BadRequest("Ну чего вы издеваетесь, напишите пож корректный индекс...");
+                return BadRequest("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ...");
             }
             Summaries.RemoveAt(index);
             return Ok();
@@ -55,7 +64,7 @@ namespace Cultura_New.Controllers
         {
             if (index < 0 || index >= Summaries.Count())
             {
-                return BadRequest("Ну чего вы издеваетесь, напишите пож корректный индекс...");
+                return BadRequest("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ...");
             }
             return Ok(Summaries[index]);
         }
@@ -63,8 +72,9 @@ namespace Cultura_New.Controllers
         public IActionResult GetByName(string name)
         {
             int count = 0;
-            foreach(string el in  Summaries) {
-                if(el == name) 
+            foreach (string el in Summaries)
+            {
+                if (el == name)
                     count++;
             }
             return Ok(count);

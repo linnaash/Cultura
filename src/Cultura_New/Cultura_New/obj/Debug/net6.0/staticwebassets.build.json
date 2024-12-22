@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "44G9c/TVTq+YBKTOFc8gx2YjPbUX+5NPxhsyjUQqIJM=",
+  "Hash": "tYG+Upj5YINoySMD1H3ZLkK+wp/9Zw/AlNo7J2hjVG4=",
   "Source": "Cultura_New",
   "BasePath": "_content/Cultura_New",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

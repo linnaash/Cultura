@@ -5,7 +5,7 @@ namespace BusinessLogic.Models.Accounts
     public class RegisterRequest
     {
         [Required]
-        public string Login {  get; set; }
+        public string Login { get; set; }
 
         [Required]
         public string Firstname { get; set; }
@@ -18,7 +18,7 @@ namespace BusinessLogic.Models.Accounts
 
         [Required]
         [EmailAddress]
-        public string Email {  get; set; }
+        public string Email { get; set; }
 
         [Required]
         [MinLength(6)]
@@ -28,7 +28,7 @@ namespace BusinessLogic.Models.Accounts
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        [Range(typeof(bool),"true","true")]
+        [Range(typeof(bool), "true", "true")]
         public bool AcceptTerms { get; set; }
     }
 }

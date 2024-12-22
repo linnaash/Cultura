@@ -1,6 +1,6 @@
-﻿using System.Net;
+﻿using BusinessLogic.Helpers;
+using System.Net;
 using System.Text.Json;
-using BusinessLogic.Helpers;
 namespace Cultura_New.Helpers
 {
     public class ErrorHandlerMiddleware
@@ -8,7 +8,7 @@ namespace Cultura_New.Helpers
         private readonly RequestDelegate _next;
         private readonly ILogger _logger;
 
-        public ErrorHandlerMiddleware(RequestDelegate next, ILogger<ErrorHandlerMiddleware>logger)
+        public ErrorHandlerMiddleware(RequestDelegate next, ILogger<ErrorHandlerMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -19,12 +19,12 @@ namespace Cultura_New.Helpers
             {
                 await _next(context);
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 var response = context.Response;
                 response.ContentType = "application/json";
 
-                switch(error)
+                switch (error)
                 {
                     case AppException e:
                         //custom application error
@@ -32,7 +32,7 @@ namespace Cultura_New.Helpers
                         break;
                     case KeyNotFoundException e:
                         //not found error
-                        response.StatusCode=(int)HttpStatusCode.NotFound;
+                        response.StatusCode = (int)HttpStatusCode.NotFound;
                         break;
                     default:
                         //unhandled error

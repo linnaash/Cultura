@@ -9,7 +9,7 @@ namespace DataAccess.Repositories
     public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
     {
         protected Cultura_bdNewContext DbContext { get; set; } //DbContext — это объект, который управляет подключением
-                                                            //и доступом к базе данных.
+                                                               //и доступом к базе данных.
         public RepositoryBase(Cultura_bdNewContext dbContext)
         {
             DbContext = dbContext;

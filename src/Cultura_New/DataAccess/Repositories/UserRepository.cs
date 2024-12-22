@@ -1,6 +1,6 @@
 ﻿using DataAccess.Models;
-using Domain.Interfaces;
 using Domain.Entities;
+using Domain.Interfaces;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 

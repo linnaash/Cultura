@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
-using Domain.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Models
@@ -33,9 +33,9 @@ namespace Domain.Models
 
         public bool OwnsToken(string token)
         {
-            return this.RefreshTokens?.Find(x=>x.Token == token) != null;
+            return this.RefreshTokens?.Find(x => x.Token == token) != null;
         }
-       
+
 
 
 
