@@ -31,11 +31,11 @@ jobs:
 
     # Проверка форматирования кода
     - name: Check code formatting
-      run: dotnet format --check --verbosity diagnostic
+      run: dotnet format src/Cultura_New/Cultura_New.sln --check --verbosity diagnostic
 
     # Сборка
     - name: Build
-      run: dotnet format src/Cultura_New/Cultura_New/Cultura_New.csproj --check --verbosity diagnostic
+      run: dotnet build src/Cultura_New/Cultura_New.sln --configuration Release
 
     # Тестирование
     - name: Test
