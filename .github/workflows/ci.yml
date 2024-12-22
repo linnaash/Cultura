@@ -14,13 +14,29 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    # Установка ICU
     - name: Install ICU
       run: sudo apt-get install -y libicu-dev
+
+    # Установка .NET Core
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0'
+
+    # Установка инструмента dotnet-format
+    - name: Install dotnet-format tool
+      run: dotnet tool install -g dotnet-format
+
+    # Проверка форматирования кода
+    - name: Check code formatting
+      run: dotnet format --check --verbosity diagnostic
+
+    # Сборка
     - name: Build
       run: dotnet build src/Cultura_New/Cultura_New.sln --configuration Release
+
+    # Тестирование
     - name: Test
       run: dotnet test src/Cultura_New/Cultura_New.sln --configuration Release --no-build
