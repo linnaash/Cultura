@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Models.Accounts;
+
 namespace BusinessLogic.Authorization
 {
     public interface IAccountService
@@ -7,7 +8,6 @@ namespace BusinessLogic.Authorization
         Task<AuthenticateResponse> RefreshToken(string token, string ipAddress);
         Task RevokeToken(string token, string ipAddress);
         Task Register(RegisterRequest model, string origin);
-
         Task VerifyEmail(string token);
         Task ForgotPassword(ForgotPasswordRequest model, string origin);
         Task ValidateResetToken(ValidateResetTokenRequest model);

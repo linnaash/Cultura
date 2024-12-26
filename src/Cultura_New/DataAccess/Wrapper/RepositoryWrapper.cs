@@ -6,18 +6,18 @@ namespace DataAccess.Wrapper
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
-        private Cultura_bdNewContext _bdContext;
-        private IUserRepository _user;
-        public IUserRepository User //IUserRepository - тип возвращаемого значения, будет возвращать объект,который реализует
+        private readonly Cultura_bdNewContext _bdContext;
+        private IEmployeeRepository _employee;
+        public IEmployeeRepository Employee //IUserRepository - тип возвращаемого значения, будет возвращать объект,который реализует
         //интерфейс IUserRepository
         {
             get
             {
-                if (_user == null)//проверка, был ли уже создан экземпляр репозитория пользователей
+                if (_employee == null)//проверка, был ли уже создан экземпляр репозитория пользователей
                 {
-                    _user = new UserRepository(_bdContext);
+                    _employee = new EmployeeRepository(_bdContext);
                 }
-                return _user;
+                return _employee;
             }
         }
         public RepositoryWrapper(Cultura_bdNewContext bdContext)

@@ -3,16 +3,17 @@ using BusinessLogic.Helpers;
 using BusinessLogic.Services;
 using Cultura_New.Authorization;
 using Cultura_New.Helpers;
-using DataAccess.Models;
 using DataAccess.Wrapper;
 using Domain.Interfaces;
-using Domain.Models;
+using DataAccess.Models;
 using Mapster;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Reflection;
 using System.Text.Json.Serialization;
+using DataAccess.Models;
 
 
 namespace Cultura_New
@@ -23,17 +24,19 @@ namespace Cultura_New
         {
             var builder = WebApplication.CreateBuilder(args);
             //��� ��������������� �������� ���������� ��������� ���� ��� ������ ������ / �������
-            builder.Services.AddDbContext<Cultura_bdNewContext>(
-                options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
+
+            builder.Services.AddDbContext<Cultura_bdNewContext>(options =>
+     options.UseSqlServer("Server=DESKTOP-E1QR638;Database=Cultura_bdNew;User Id=sa;Password=12345;"));
+
 
             //// configure strongly typed settings object
             builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-            //Scoped ��������, ��� ���� ��������� ������� ����� �������������� �� ������ HTTP-������. ��� ������, ������ ���
-            //����������� ����� �������� � ����� ���������� ���� ������, ������� ������ ���� "�����������" � �������� ������
-            //�������.
+            ////Scoped ��������, ��� ���� ��������� ������� ����� �������������� �� ������ HTTP-������. ��� ������, ������ ���
+            ////����������� ����� �������� � ����� ���������� ���� ������, ������� ������ ���� "�����������" � �������� ������
+            ////�������.
             builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
-            builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
             // configure DI for application services
             builder.Services.AddScoped<IJwtUtils, JwtUtils>();

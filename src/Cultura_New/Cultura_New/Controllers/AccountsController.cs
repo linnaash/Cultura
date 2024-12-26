@@ -61,8 +61,9 @@ namespace Cultura_New.Controllers
             if (string.IsNullOrEmpty(token))
                 return BadRequest(new { message = "Token is required" });
             //users can revoke their own tokens and admins can revoke any tokens
-            if (!user.OwnsToken(token) && user.Role != Role.Admin)
+            if (!employee.OwnsToken(token) && employee.Role != Role.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
+
 
             await _accountService.RevokeToken(token, ipAddress());
             return Ok(new { message = "Token revoked" });
@@ -115,7 +116,7 @@ namespace Cultura_New.Controllers
         public async Task<ActionResult<AccountResponse>> GetById(int id)
         {
             //users can get their own account and admins can get any account
-            if (id != user.UserId && user.Role != Role.Admin)
+            if (id != employee.EmployeeId && employee.Role != Role.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
             var account = await _accountService.GetById(id);
             return Ok(account);
@@ -131,11 +132,11 @@ namespace Cultura_New.Controllers
         public async Task<ActionResult<AccountResponse>> Update(int id, UpdateRequest model)
         {
             //users can update their own account and admins can update any account
-            if (id != user.UserId && user.Role != Role.Admin)
+            if (id != employee.EmployeeId && employee.Role != Role.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             //only admins can update role
-            if (user.Role != Role.Admin)
+            if (employee.Role != Role.Admin)
                 model.Role = null;
 
             var account = await _accountService.Update(id, model);
@@ -145,7 +146,7 @@ namespace Cultura_New.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             //administrators can delete any account
-            if (user.Role != Role.Admin)
+            if (employee.Role != Role.Admin)
                 return Unauthorized(new { message = "Unauthorized" });
 
             await _accountService.Delete(id);

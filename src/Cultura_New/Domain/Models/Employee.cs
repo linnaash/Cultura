@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Domain.Entities;
 
 namespace Domain.Models
 {
@@ -7,33 +8,43 @@ namespace Domain.Models
     {
         public Employee()
         {
-            Departments = new HashSet<Department>();
-            EmergencyPlans = new HashSet<EmergencyPlan>();
-            EmployeeReports = new HashSet<EmployeeReport>();
-            EmployeeSchedules = new HashSet<EmployeeSchedule>();
-            EmployeeTasks = new HashSet<EmployeeTask>();
             EmployeeTrainings = new HashSet<EmployeeTraining>();
             EmployeeWorkTimes = new HashSet<EmployeeWorkTime>();
             EventPlannings = new HashSet<EventPlanning>();
             Events = new HashSet<Event>();
-            Users = new HashSet<User>();
         }
 
         public int EmployeeId { get; set; }
-        public string FirstName { get; set; } = null!;
-        public string LastName { get; set; } = null!;
         public int? DepartmentId { get; set; }
+        public string Email { get; set; } = null!;
+        public string Firstname { get; set; } = null!;
+        public string Lastname { get; set; } = null!;
+        public string Login { get; set; } = null!;
+        public string? Middlename { get; set; }
+        public string Password { get; set; } = null!;
+        public string? Phone { get; set; }
+        public DateTime? Created { get; set; }
+        public DateTime? Updated { get; set; }
+        public Role Role { get; set; }
+        public DateTime? PasswordReset { get; set; }
+        public string? ResetToken { get; set; }
+        public DateTime? ResetTokenExpires { get; set; }
+        public string? VerificationToken { get; set; }
+        public DateTime? Verified { get; set; }
+        public bool AcceptTerms { get; set; }
+        public DateTime? BirthDate { get; set; }
 
+
+        public bool IsVerified => Verified.HasValue || PasswordReset.HasValue;
         public virtual Department? Department { get; set; }
-        public virtual ICollection<Department> Departments { get; set; }
-        public virtual ICollection<EmergencyPlan> EmergencyPlans { get; set; }
-        public virtual ICollection<EmployeeReport> EmployeeReports { get; set; }
-        public virtual ICollection<EmployeeSchedule> EmployeeSchedules { get; set; }
-        public virtual ICollection<EmployeeTask> EmployeeTasks { get; set; }
         public virtual ICollection<EmployeeTraining> EmployeeTrainings { get; set; }
         public virtual ICollection<EmployeeWorkTime> EmployeeWorkTimes { get; set; }
         public virtual ICollection<EventPlanning> EventPlannings { get; set; }
         public virtual ICollection<Event> Events { get; set; }
-        public virtual ICollection<User> Users { get; set; }
+        public  List <RefreshToken> RefreshTokens { get; set; }
+        public bool OwnsToken(string token)
+        {
+            return this.RefreshTokens?.Find(x=>x.Token == token) != null;
+        }
     }
 }

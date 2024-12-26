@@ -11,5 +11,7 @@ namespace Domain.Models
         public string FeedbackText { get; set; } = null!;
         public int? Rating { get; set; }
         public DateTime SubmissionDate { get; set; }
+
+        public virtual Event Event { get; set; } = null!;
     }
 }

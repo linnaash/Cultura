@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace BusinessLogic.Models.Accounts
 {
     public class RegisterRequest
@@ -29,6 +30,7 @@ namespace BusinessLogic.Models.Accounts
         public string ConfirmPassword { get; set; }
 
         [Range(typeof(bool), "true", "true")]
-        public bool AcceptTerms { get; set; }
+        public bool AcceptTerms {  get; set; }
     }
 }
+

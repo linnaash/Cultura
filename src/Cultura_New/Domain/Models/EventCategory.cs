@@ -11,7 +11,7 @@ namespace Domain.Models
         }
 
         public int EventCategoryId { get; set; }
-        public string CategoryName { get; set; } = null!;
+        public string? CategoryName { get; set; }
 
         public virtual ICollection<Event> Events { get; set; }
     }

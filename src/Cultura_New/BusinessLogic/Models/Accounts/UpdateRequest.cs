@@ -10,8 +10,8 @@ namespace BusinessLogic.Models.Accounts
         private string _role;
         private string _email;
 
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
 
         [EnumDataType(typeof(Role))]
         public string Role
@@ -19,6 +19,7 @@ namespace BusinessLogic.Models.Accounts
             get => _role;
             set => _role = replaceEmptyWithNull(value);
         }
+
         [EmailAddress]
         public string Email
         {

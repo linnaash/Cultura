@@ -26,14 +26,14 @@ namespace Cultura_New.Authorization
             _appSettings = appSettings.Value;
         }
 
-        public string GenerateJwtToken(User account)
+        public string GenerateJwtToken(Employee account)
         {
             //generate token that is valid for 15 minutes
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("id", account.UserId.ToString()), new Claim(ClaimTypes.Role, account.Role.ToString()) }),
+                Subject = new ClaimsIdentity(new[] { new Claim("id", account.EmployeeId.ToString()), new Claim(ClaimTypes.Role, account.Role.ToString()) }),
                 Expires = DateTime.UtcNow.AddMinutes(15),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -54,7 +54,7 @@ namespace Cultura_New.Authorization
 
             };
             //ensure token is unique by checking against db
-            var tokenIsUnique = (await _wrapper.User.FindByCondition(a => a.RefreshTokens.Any(t => t.Token == refreshToken.Token))).Count == 0;
+            var tokenIsUnique = (await _wrapper.Employee.FindByCondition(a => a.RefreshTokens.Any(t => t.Token == refreshToken.Token))).Count == 0;
             if (!tokenIsUnique)
                 return await GenerateResreshToken(ipAddress);
 

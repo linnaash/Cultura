@@ -6,9 +6,10 @@ namespace Domain.Models
     public partial class Supply
     {
         public int SupplyId { get; set; }
-        public string SupplyName { get; set; } = null!;
-        public int VenueId { get; set; }
+        public string? SupplyName { get; set; }
+        public int? Quantity { get; set; }
+        public int? EventId { get; set; }
 
-        public virtual Venue Venue { get; set; } = null!;
+        public virtual Event? Event { get; set; }
     }
 }

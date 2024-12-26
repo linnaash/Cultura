@@ -1,0 +1,11 @@
+wwwroot\css\app.css
+wwwroot\index.html
+wwwroot\Resources\app-development.png
+wwwroot\Resources\blazor.png
+wwwroot\Resources\database.png
+wwwroot\Resources\database_.png
+wwwroot\Resources\development.png
+wwwroot\Resources\house.png
+wwwroot\Resources\painter.png
+wwwroot\Resources\web-api.png
+wwwroot\Resources\web-api_.png

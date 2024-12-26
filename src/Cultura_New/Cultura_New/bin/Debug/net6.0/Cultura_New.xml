@@ -4,13 +4,13 @@
         <name>Cultura_New</name>
     </assembly>
     <members>
-        <member name="M:Cultura_New.Controllers.UserController.GetAll">
+        <member name="M:Cultura_New.Controllers.EmployeeController.GetAll">
             <summary>
             Получить список всех пользователей
             </summary>
             <returns>Список всех пользователей</returns>
         </member>
-        <member name="M:Cultura_New.Controllers.UserController.GetById(System.Int32)">
+        <member name="M:Cultura_New.Controllers.EmployeeController.GetById(System.Int32)">
             <summary>
             Получить данные пользователя по идентификатору
             </summary>
@@ -19,7 +19,7 @@
             <response code="200">Пользователь найден</response>
             <response code="404">Пользователь с указанным идентификатором не найден</response>
         </member>
-        <member name="M:Cultura_New.Controllers.UserController.Add(Cultura_New.Contracts.User.CreateUserRequest)">
+        <member name="M:Cultura_New.Controllers.EmployeeController.Add(Cultura_New.Contracts.Employee.CreateEmployeeRequest)">
             <summary>
             Создание нового пользователя
             </summary>
@@ -40,13 +40,13 @@
             <response code="201">Пользователь успешно создан</response>
             <response code="400">Ошибка в данных запроса</response>
         </member>
-        <member name="M:Cultura_New.Controllers.UserController.Update(System.Int32,Cultura_New.Contracts.User.UpdateUserRequest)">
+        <member name="M:Cultura_New.Controllers.EmployeeController.Update(System.Int32,Cultura_New.Contracts.Employee.UpdateEmployeeRequest)">
             <summary>
             Обновление данных пользователя
             </summary>
             <remarks>
             Пример запроса:
-                PUT /Users
+                PUT /Employee
                 {
                     "login": "Alina Eeeee Krut",
                     "password": "passw167",
@@ -62,7 +62,7 @@
             <response code="400">Ошибка в данных запроса</response>
             <response code="404">Пользователь с указанным идентификатором не найден</response>
         </member>
-        <member name="M:Cultura_New.Controllers.UserController.Delete(System.Int32)">
+        <member name="M:Cultura_New.Controllers.EmployeeController.Delete(System.Int32)">
             <summary>
             Удаление пользователя
             </summary>

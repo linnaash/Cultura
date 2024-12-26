@@ -1,12 +1,14 @@
 ﻿using BusinessLogic.Authorization;
 using BusinessLogic.Helpers;
-using BusinessLogic.Models.Accounts;
-using Domain.Entities;
-using Domain.Interfaces;
-using Domain.Models;
-using MapsterMapper;
 using Microsoft.Extensions.Options;
 using System.Security.Cryptography;
+using Domain.Interfaces;
+using MapsterMapper;
+using Domain.Models;
+using Domain.Entities;
+using BusinessLogic.Models.Accounts;
+
+
 
 namespace BusinessLogic.Services
 {
@@ -31,7 +33,7 @@ namespace BusinessLogic.Services
             _appSettings = appSettings;
             _emailService = emailService;
         }
-        private void removeOldRefreshToken(User account)
+        private void removeOldRefreshTokens(Employee account)
         {
             account.RefreshTokens.RemoveAll(x =>
             x.IsActive &&
@@ -39,11 +41,11 @@ namespace BusinessLogic.Services
         }
         public async Task<AuthenticateResponse> Authenticate(AuthenticateRequest model, string ipAddress)
         {
-            var account = await _repositoryWrapper.User.GetByEmailWithToken(model.Email);
+            var account = await _repositoryWrapper.Employee.GetByEmailWithToken(model.Email);
 
             //validate
             if (account == null || !account.IsVerified || !BCrypt.Net.BCrypt.Verify(model.Password, account.Password))//PasswordHash
-                throw new AppException("Email or password is incorrect");
+                throw new AppException("EmailGetByEmailWithToken or password is incorrect");
 
             //authentication successful so generate jwt and refresh tokens
             var jwtToken = _jwtUtils.GenerateJwtToken(account);
@@ -51,10 +53,10 @@ namespace BusinessLogic.Services
             account.RefreshTokens.Add(refreshToken);
 
             //remove old refresh tokens from account
-            removeOldRefreshToken(account);
+            removeOldRefreshTokens(account);
 
             //save changes to db
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
 
             var response = _mapper.Map<AuthenticateResponse>(account);
@@ -67,11 +69,11 @@ namespace BusinessLogic.Services
         public async Task<AccountResponse> Create(CreateRequest model)
         {
             //validate
-            if ((await _repositoryWrapper.User.FindByCondition(x => x.Email == model.Email)).Count > 0)
+            if ((await _repositoryWrapper.Employee.FindByCondition(x => x.Email == model.Email)).Count > 0)
                 throw new AppException($"Email '{model.Email}' is already registered");
 
             //map model to new account object
-            var account = _mapper.Map<User>(model);
+            var account = _mapper.Map<Employee>(model);
             account.Created = DateTime.UtcNow;
             account.Verified = DateTime.UtcNow;
             //hash password
@@ -79,14 +81,14 @@ namespace BusinessLogic.Services
 
             //save account
 
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
 
             return _mapper.Map<AccountResponse>(account);
         }
-        private async Task<User> getAccount(int id)
+        private async Task<Employee> getAccount(int id)
         {
-            var account = (await _repositoryWrapper.User.FindByCondition(x => x.UserId == id)).FirstOrDefault();
+            var account = (await _repositoryWrapper.Employee.FindByCondition(x => x.EmployeeId == id)).FirstOrDefault();
             if (account == null) throw new KeyNotFoundException("Account not found");
             return account;
         }
@@ -95,7 +97,7 @@ namespace BusinessLogic.Services
             var account = await getAccount(id);
 
             //validate
-            if (account.Email != model.Email && (await _repositoryWrapper.User.FindByCondition(x => x.Email == model.Email)).Count > 0)
+            if (account.Email != model.Email && (await _repositoryWrapper.Employee.FindByCondition(x => x.Email == model.Email)).Count > 0)
                 throw new AppException($"Email ' {model.Email}' is already registered");
             //Hash password if it was entered
             if (!string.IsNullOrEmpty(model.Password))
@@ -105,7 +107,7 @@ namespace BusinessLogic.Services
             //copy model to account and save
             _mapper.Map(model, account);
             account.Updated = DateTime.UtcNow;
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
 
             return _mapper.Map<AccountResponse>(account);
@@ -114,12 +116,12 @@ namespace BusinessLogic.Services
         public async Task Delete(int id)
         {
             var account = await getAccount(id);
-            await _repositoryWrapper.User.Delete(account);
+            await _repositoryWrapper.Employee.Delete(account);
             await _repositoryWrapper.Save();
         }
         public async Task<IEnumerable<AccountResponse>> GetAll()
         {
-            var accounts = await _repositoryWrapper.User.FindAll();
+            var accounts = await _repositoryWrapper.Employee.FindAll();
             return _mapper.Map<IList<AccountResponse>>(accounts);
         }
 
@@ -135,7 +137,7 @@ namespace BusinessLogic.Services
             var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(64));
 
             //ensure token is unique by checking agains db
-            var tokenIsUnique = (await _repositoryWrapper.User.FindByCondition(x => x.ResetToken == token)).Count == 0;
+            var tokenIsUnique = (await _repositoryWrapper.Employee.FindByCondition(x => x.ResetToken == token)).Count == 0;
             if (!tokenIsUnique)
                 return await generateResetToken();
 
@@ -143,7 +145,7 @@ namespace BusinessLogic.Services
         }
         public async Task ForgotPassword(ForgotPasswordRequest model, string origin)
         {
-            var account = (await _repositoryWrapper.User.FindByCondition(x => x.Email == model.Email)).FirstOrDefault();
+            var account = (await _repositoryWrapper.Employee.FindByCondition(x => x.Email == model.Email)).FirstOrDefault();
 
             //always return ok response to prevent email enumeration
             if (account == null) return;
@@ -152,15 +154,15 @@ namespace BusinessLogic.Services
             account.ResetToken = await generateResetToken();
             account.ResetTokenExpires = DateTime.UtcNow.AddDays(1);
 
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
         }
-        private async Task<User> getAccountByRefreshToken(string token)
+        private async Task<Employee> getAccountByRefreshToken(string token)
         {
-            var account = (await _repositoryWrapper.User.FindByCondition(u => u.RefreshTokens.Any(t => t.Token == token))).SingleOrDefault();
+            var account = (await _repositoryWrapper.Employee.FindByCondition(u => u.RefreshTokens.Any(t => t.Token == token))).SingleOrDefault();
             if (account == null) throw new AppException("Invalid token");
             return account;
-            ;
+            
         }
         private async Task<RefreshToken> rotateRefreshToken(RefreshToken refreshToken, string ipAddress)
         {
@@ -176,7 +178,7 @@ namespace BusinessLogic.Services
             token.ReasonRevoked = reason;
             token.ReplacedByToken = replacedByToken;
         }
-        private void revokeDescendantRefreshTokens(RefreshToken refreshToken, User account, string ipAddress, string reason)
+        private void revokeDescendantRefreshTokens(RefreshToken refreshToken, Employee account, string ipAddress, string reason)
         {
             //recursively traverse the refresh token chain and ensure all descendants are revoked
             if (!string.IsNullOrEmpty(refreshToken.ReplacedByToken))
@@ -193,11 +195,12 @@ namespace BusinessLogic.Services
         {
             var account = await getAccountByRefreshToken(token);
             var refreshToken = account.RefreshTokens.Single(x => x.Token == token);
+
             if (refreshToken.IsRevoked)
             {
                 //revoke all descendant tokens in case this token has been compromised
                 revokeDescendantRefreshTokens(refreshToken, account, ipAddress, $"Attempted reuse of revoked ancestor token: {token}");
-                await _repositoryWrapper.User.Update(account);
+                await _repositoryWrapper.Employee.Update(account);
                 await _repositoryWrapper.Save();
             }
             if (!refreshToken.IsActive)
@@ -209,10 +212,10 @@ namespace BusinessLogic.Services
             account.RefreshTokens.Add(newRefreshToken);
 
             //remove old refresh tokens from account
-            removeOldRefreshToken(account);
+            removeOldRefreshTokens(account);
 
             //save changes to db
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
 
             //generate new jwt
@@ -231,24 +234,25 @@ namespace BusinessLogic.Services
             var token = Convert.ToHexString(RandomNumberGenerator.GetBytes(64));
 
             //ensure token is unique by checking agains db
-            var tokenIsUnique = (await _repositoryWrapper.User.FindByCondition(x => x.VerificationToken == token)).Count == 0;
+            var tokenIsUnique = (await _repositoryWrapper.Employee.FindByCondition(x => x.VerificationToken == token)).Count == 0;
             if (!tokenIsUnique)
                 return await generateVerificationToken();
+
             return token;
         }
         public async Task Register(RegisterRequest model, string origin)
         {
             //validate
-            if ((await _repositoryWrapper.User.FindByCondition(x => x.Email == model.Email)).Count > 0)
+            if ((await _repositoryWrapper.Employee.FindByCondition(x => x.Email == model.Email)).Count > 0)
             {
                 return;
             }
 
             //map model to new account object
-            var account = _mapper.Map<User>(model);
+            var account = _mapper.Map<Employee>(model);
 
             //first registered account is in admin
-            var isFirstAccount = (await _repositoryWrapper.User.FindAll()).Count == 0;
+            var isFirstAccount = (await _repositoryWrapper.Employee.FindAll()).Count == 0;
             account.Role = isFirstAccount ? Role.Admin : Role.User;
             //account.Role = Role.User;
             account.Created = DateTime.UtcNow;
@@ -259,13 +263,13 @@ namespace BusinessLogic.Services
             account.Password = BCrypt.Net.BCrypt.HashPassword(model.Password);
 
             //save account
-            await _repositoryWrapper.User.Create(account);
+            await _repositoryWrapper.Employee.Create(account);
             await _repositoryWrapper.Save();
 
         }
-        private async Task<User> getAccountByResetToken(string token)
+        private async Task<Employee> getAccountByResetToken(string token)
         {
-            var account = (await _repositoryWrapper.User.FindByCondition(x =>
+            var account = (await _repositoryWrapper.Employee.FindByCondition(x =>
             x.ResetToken == token && x.ResetTokenExpires > DateTime.UtcNow)).SingleOrDefault();
             if (account == null) throw new AppException("Invalid token");
             return account;
@@ -281,7 +285,7 @@ namespace BusinessLogic.Services
             account.ResetToken = null;
             account.ResetTokenExpires = null;
 
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
         }
 
@@ -295,7 +299,7 @@ namespace BusinessLogic.Services
 
             //revoke token and save
             revokeRefreshToken(refreshToken, ipAddress, "Revoked without replacement");
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
         }
 
@@ -308,7 +312,7 @@ namespace BusinessLogic.Services
 
         public async Task VerifyEmail(string token)
         {
-            var account = (await _repositoryWrapper.User.FindByCondition(x => x.VerificationToken == token)).FirstOrDefault();
+            var account = (await _repositoryWrapper.Employee.FindByCondition(x => x.VerificationToken == token)).FirstOrDefault();
 
             if (account == null)
                 throw new AppException("Verification failed");
@@ -316,7 +320,7 @@ namespace BusinessLogic.Services
             account.Verified = DateTime.UtcNow;
             account.VerificationToken = null;
 
-            await _repositoryWrapper.User.Update(account);
+            await _repositoryWrapper.Employee.Update(account);
             await _repositoryWrapper.Save();
         }
     }

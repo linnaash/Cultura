@@ -23,7 +23,7 @@ namespace Cultura_New.Authorization
             if (accountId != null)
             {
                 //attach account to context on succesful jwt validation
-                context.Items["User"] = (await wrapper.User.GetByIdWithToken(accountId.Value));
+                context.Items["Employee"] = (await wrapper.Employee.GetByIdWithToken(accountId.Value));
             }
             await _next(context);
         }

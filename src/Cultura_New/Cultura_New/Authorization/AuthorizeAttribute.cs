@@ -3,6 +3,7 @@ using Domain.Models;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using System.Linq;
 
 namespace Cultura_New.Authorization
 {
@@ -10,6 +11,7 @@ namespace Cultura_New.Authorization
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
     {
         private readonly IList<Role> _roles;
+
 
         public AuthorizeAttribute(params Role[] roles)
         {
@@ -23,7 +25,7 @@ namespace Cultura_New.Authorization
                 return;
 
             //authorization
-            var account = (User)context.HttpContext.Items["User"];
+            var account = (Employee)context.HttpContext.Items["Employee"];
             if (account == null || (_roles.Any() && !_roles.Contains(account.Role)))
             {
                 //not logged in or role not authorized
