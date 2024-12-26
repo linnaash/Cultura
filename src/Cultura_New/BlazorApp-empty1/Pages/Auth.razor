@@ -1,20 +1,79 @@
 ﻿@page "/auth"
 
-<h3>Регистрация</h3>
+@* Стили для центрирования формы *@
+<style>
+    .auth-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
 
-<form>
-    <!-- Поля для ввода данных регистрации -->
-    <div>
-        <label>Имя</label>
-        <input type="text" />
+    .auth-form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .auth-form div {
+        margin-bottom: 15px;
+    }
+
+    .auth-form input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+    .auth-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: orange;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .auth-form button:hover {
+        background-color: darkorange;
+    }
+
+    .auth-form .login-link {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .auth-form .login-link a {
+        color: blue;
+        text-decoration: none;
+    }
+</style>
+
+<div class="auth-container">
+    <h3>Регистрация</h3>
+
+    <form class="auth-form">
+        <div>
+            <label>Email</label>
+            <input type="email" placeholder="Введите ваш email" />
+        </div>
+        <div>
+            <label>Пароль</label>
+            <input type="password" placeholder="Введите пароль" />
+        </div>
+        <button type="submit">Войти</button>
+    </form>
+
+    <div class="login-link">
+        <p>Не зарегистрированы? <a href="/auth">Зарегистрироваться</a></p>
     </div>
-    <div>
-        <label>Email</label>
-        <input type="email" />
-    </div>
-    <div>
-        <label>Пароль</label>
-        <input type="password" />
-    </div>
-    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
-</form>
+</div>

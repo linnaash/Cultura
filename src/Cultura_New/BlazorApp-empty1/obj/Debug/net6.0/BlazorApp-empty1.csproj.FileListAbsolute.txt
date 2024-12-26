@@ -1749,10 +1749,10 @@ C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Blazo
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\BlazorApp-empty1.pdb
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\ref\BlazorApp-empty1.dll
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\nzulnspjyt-vsx259j5ph.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ydzx6i59ps-d89wiocrx3.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\resuliv7gk-7prm9hqq16.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ujwugxqoxo-ahhj1n4teq.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\7njes7k89t-zpy729uqmx.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\qqm9qs3ym9-7jxa1tmfim.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\hl9s2u9hzu-w8akhu8xj0.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\nzulnspjyt-1c7va051dh.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ydzx6i59ps-btcb4p7i9l.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\resuliv7gk-5e1k1ryzz9.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ujwugxqoxo-ee03572nxs.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\7njes7k89t-2vz48k2fdo.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\qqm9qs3ym9-18e90mra76.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\hl9s2u9hzu-226f5xqbfp.gz

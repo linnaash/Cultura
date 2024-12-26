@@ -84,7 +84,19 @@ section {
 button {
     max-width: 50%;
     border-radius: 50px !important;
+    background-color: #FF7F00; /* Оранжевый */
+    color: white; /* Белый текст */
+    border: none; /* Убираем границу */
+    padding: 10px 20px; /* Добавляем отступы для удобства */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход при наведении */
 }
+
+    button:hover {
+        background-color: #e67300; /* Более темный оранжевый при наведении */
+    }
+
 
 #hero .col {
     justify-content: center;
@@ -119,6 +131,7 @@ button {
     height: 50px;
     margin-bottom: 20px;
 }
+
 
 /* Styling for the Project Section */
 #projects .projects {
