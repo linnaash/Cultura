@@ -26,7 +26,8 @@ namespace Cultura_New
             //��� ��������������� �������� ���������� ��������� ���� ��� ������ ������ / �������
 
             builder.Services.AddDbContext<Cultura_bdNewContext>(options =>
-     options.UseSqlServer("Server=DESKTOP-E1QR638;Database=Cultura_bdNew;User Id=sa;Password=12345;"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CONNECTION_STRING")));
+
 
 
             //// configure strongly typed settings object

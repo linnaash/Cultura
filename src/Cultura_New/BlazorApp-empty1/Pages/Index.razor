@@ -1,4 +1,7 @@
-﻿@page "/"
+﻿
+@inject NavigationManager NavigationManager
+
+@page "/"
 
 <style>
     body {
@@ -56,7 +59,8 @@
             <div class="col">
                 <h1>Добро пожаловать в Cultura!</h1>
                 <p>Cultura — система, которая упрощает организацию мероприятий в культурных центрах, обеспечивая управление данными, регистрацию участников, и многое другое!</p>
-                <button type="button" class="btn btn-dark btn-lg">Начать!</button>
+                <button @onclick="NavigateToAuth" class="btn btn-dark btn-lg">Начать!</button>
+
             </div>
             <div class="col">
                 <img src="/Resources/house.png" alt="Культурный центр" style="width: 500px; height: auto;">
@@ -121,3 +125,10 @@
         </div>
     </div>
 </section>
+
+@code {
+    private void NavigateToAuth()
+    {
+        NavigationManager.NavigateTo("/auth");
+    }
+}

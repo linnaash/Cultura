@@ -1753,6 +1753,6 @@ C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Blazo
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ydzx6i59ps-d89wiocrx3.gz
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\resuliv7gk-7prm9hqq16.gz
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\ujwugxqoxo-ahhj1n4teq.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\7njes7k89t-uuqh4t90up.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\qqm9qs3ym9-mhm1ybvh06.gz
-C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\hl9s2u9hzu-fifvnlbis6.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\7njes7k89t-zpy729uqmx.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\qqm9qs3ym9-7jxa1tmfim.gz
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\BlazorApp-empty1\obj\Debug\net6.0\compressed\hl9s2u9hzu-w8akhu8xj0.gz
