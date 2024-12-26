@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\Auth.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Dockerfile" />
     <None Remove="wwwroot\Resources\painter.png" />
   </ItemGroup>

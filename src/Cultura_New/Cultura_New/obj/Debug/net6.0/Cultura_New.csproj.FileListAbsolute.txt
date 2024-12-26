@@ -98,3 +98,4 @@ C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Cultu
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Cultura_New\obj\Debug\net6.0\Cultura_New.pdb
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Cultura_New\obj\Debug\net6.0\Cultura_New.genruntimeconfig.cache
 C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Cultura_New\obj\Debug\net6.0\ref\Cultura_New.dll
+C:\Users\allsc\Desktop\Учеба\ларионов\Cultura\src\Cultura_New\Cultura_New\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
