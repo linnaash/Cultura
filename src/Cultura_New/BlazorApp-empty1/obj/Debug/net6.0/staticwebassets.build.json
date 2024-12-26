@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "D+w2I0AdvFKyksNRJEXKQd3UGEgjTCwnIDkiSwYb6Iw=",
+  "Hash": "W4VeZi9y0SIZC86WdELoSjAA31aheNwYOpfUTp6LNNU=",
   "Source": "BlazorApp-empty1",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "226f5xqbfp",
-      "Integrity": "anVhva8/KR12wvfeNkVoe9lMiQF6x9kFgU1j7xB1Vyg=",
+      "Fingerprint": "m17ur5iajh",
+      "Integrity": "Kk5DEm+ZVjk3fUbfD+nkyujoB5KW0t3W7pWwOiC1YIw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\blazor.boot.json"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "2vz48k2fdo",
-      "Integrity": "crlpDVvaSnmwxPtLMafOYqPQMjOzodtWr6qCIX+5Q48=",
+      "Fingerprint": "v5ntrl8ksw",
+      "Integrity": "ffal/OnfNEurIRks4k1wB19FTJ9PLhCm1BlJtX5xVes=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\BlazorApp-empty1.dll"
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "18e90mra76",
-      "Integrity": "QfgENv7L2dcNcRXPjXKE8JS8L2ycCHzdq0YgiN/k7HU=",
+      "Fingerprint": "49859uf0uk",
+      "Integrity": "CIp5S7M2+Gla8LVpgf7PaUv28rkasJUKJsLNDgv3v1E=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\BlazorApp-empty1.pdb"
@@ -5645,7 +5645,7 @@
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.WebProxy.dll"
     },
     {
-      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-2vz48k2fdo.gz",
+      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-v5ntrl8ksw.gz",
       "SourceId": "BlazorApp-empty1",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\",
@@ -5659,8 +5659,8 @@
       "RelatedAsset": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorApp-empty1.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ds2gtvhu9c",
-      "Integrity": "HRux1gicog5X7Ft3MVF2syO9hz1+NOn6IxPHmp0bLBI=",
+      "Fingerprint": "ccyz6v9vuo",
+      "Integrity": "ZHWDtaFzGkePXuQzB9d/ghv9zG8LCtLbMV5kxITW6iQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorApp-empty1.dll"
@@ -6968,7 +6968,7 @@
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Data.Common.dll"
     },
     {
-      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-226f5xqbfp.gz",
+      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-m17ur5iajh.gz",
       "SourceId": "BlazorApp-empty1",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\",
@@ -6982,8 +6982,8 @@
       "RelatedAsset": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "iktzy497z1",
-      "Integrity": "csItYP2coWJQgGK4UAttUjRTmtmUw29uhD+BRf06G30=",
+      "Fingerprint": "i5829negyq",
+      "Integrity": "OiWSnUNplsmaIbtYn50yzhOIKR3JYhb4RRO5amdQocg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -8291,7 +8291,7 @@
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Collections.NonGeneric.dll"
     },
     {
-      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-18e90mra76.gz",
+      "Identity": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-49859uf0uk.gz",
       "SourceId": "BlazorApp-empty1",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\",
@@ -8305,8 +8305,8 @@
       "RelatedAsset": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorApp-empty1.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "fp1ypji3ev",
-      "Integrity": "3f0Y6XdaZJH6h5bM65vq4nxaQYJnkQFeAqddb2l+Z58=",
+      "Fingerprint": "i6hprrfbn8",
+      "Integrity": "Ohrbr6Ovjsx9oPZQyqkdx4tsh144kDhCsoxoFKU5U84=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\bin\\Debug\\net6.0\\wwwroot\\_framework\\BlazorApp-empty1.pdb"
@@ -9760,7 +9760,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"anVhva8/KR12wvfeNkVoe9lMiQF6x9kFgU1j7xB1Vyg=\""
+          "Value": "\"Kk5DEm+ZVjk3fUbfD+nkyujoB5KW0t3W7pWwOiC1YIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 10:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kk5DEm+ZVjk3fUbfD+nkyujoB5KW0t3W7pWwOiC1YIw="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/blazor.boot.json",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-m17ur5iajh.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000100401606"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9959"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OiWSnUNplsmaIbtYn50yzhOIKR3JYhb4RRO5amdQocg=\""
         },
         {
           "Name": "Last-Modified",
@@ -9769,45 +9808,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-anVhva8/KR12wvfeNkVoe9lMiQF6x9kFgU1j7xB1Vyg="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-226f5xqbfp.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000100411688"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9958"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"csItYP2coWJQgGK4UAttUjRTmtmUw29uhD+BRf06G30=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -9823,19 +9823,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"anVhva8/KR12wvfeNkVoe9lMiQF6x9kFgU1j7xB1Vyg=\""
+          "Value": "W/\"Kk5DEm+ZVjk3fUbfD+nkyujoB5KW0t3W7pWwOiC1YIw=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-anVhva8/KR12wvfeNkVoe9lMiQF6x9kFgU1j7xB1Vyg="
+          "Value": "sha256-Kk5DEm+ZVjk3fUbfD+nkyujoB5KW0t3W7pWwOiC1YIw="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-226f5xqbfp.gz",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\hl9s2u9hzu-m17ur5iajh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9844,7 +9844,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9958"
+          "Value": "9959"
         },
         {
           "Name": "Content-Type",
@@ -9852,11 +9852,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"csItYP2coWJQgGK4UAttUjRTmtmUw29uhD+BRf06G30=\""
+          "Value": "\"OiWSnUNplsmaIbtYn50yzhOIKR3JYhb4RRO5amdQocg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9874,7 +9874,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-csItYP2coWJQgGK4UAttUjRTmtmUw29uhD+BRf06G30="
+          "Value": "sha256-OiWSnUNplsmaIbtYn50yzhOIKR3JYhb4RRO5amdQocg="
         }
       ]
     },
@@ -10034,7 +10034,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"crlpDVvaSnmwxPtLMafOYqPQMjOzodtWr6qCIX+5Q48=\""
+          "Value": "\"ffal/OnfNEurIRks4k1wB19FTJ9PLhCm1BlJtX5xVes=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 10:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ffal/OnfNEurIRks4k1wB19FTJ9PLhCm1BlJtX5xVes="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/BlazorApp-empty1.dll",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-v5ntrl8ksw.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000108707468"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9198"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZHWDtaFzGkePXuQzB9d/ghv9zG8LCtLbMV5kxITW6iQ=\""
         },
         {
           "Name": "Last-Modified",
@@ -10043,45 +10082,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-crlpDVvaSnmwxPtLMafOYqPQMjOzodtWr6qCIX+5Q48="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/BlazorApp-empty1.dll",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-2vz48k2fdo.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000108766587"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9193"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HRux1gicog5X7Ft3MVF2syO9hz1+NOn6IxPHmp0bLBI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -10097,19 +10097,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"crlpDVvaSnmwxPtLMafOYqPQMjOzodtWr6qCIX+5Q48=\""
+          "Value": "W/\"ffal/OnfNEurIRks4k1wB19FTJ9PLhCm1BlJtX5xVes=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-crlpDVvaSnmwxPtLMafOYqPQMjOzodtWr6qCIX+5Q48="
+          "Value": "sha256-ffal/OnfNEurIRks4k1wB19FTJ9PLhCm1BlJtX5xVes="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp-empty1.dll.gz",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-2vz48k2fdo.gz",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\7njes7k89t-v5ntrl8ksw.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10118,7 +10118,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "9193"
+          "Value": "9198"
         },
         {
           "Name": "Content-Type",
@@ -10126,11 +10126,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HRux1gicog5X7Ft3MVF2syO9hz1+NOn6IxPHmp0bLBI=\""
+          "Value": "\"ZHWDtaFzGkePXuQzB9d/ghv9zG8LCtLbMV5kxITW6iQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10148,7 +10148,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HRux1gicog5X7Ft3MVF2syO9hz1+NOn6IxPHmp0bLBI="
+          "Value": "sha256-ZHWDtaFzGkePXuQzB9d/ghv9zG8LCtLbMV5kxITW6iQ="
         }
       ]
     },
@@ -10171,7 +10171,46 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QfgENv7L2dcNcRXPjXKE8JS8L2ycCHzdq0YgiN/k7HU=\""
+          "Value": "\"CIp5S7M2+Gla8LVpgf7PaUv28rkasJUKJsLNDgv3v1E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 26 Dec 2024 10:57:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CIp5S7M2+Gla8LVpgf7PaUv28rkasJUKJsLNDgv3v1E="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/BlazorApp-empty1.pdb",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-49859uf0uk.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000056724715"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17628"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ohrbr6Ovjsx9oPZQyqkdx4tsh144kDhCsoxoFKU5U84=\""
         },
         {
           "Name": "Last-Modified",
@@ -10180,45 +10219,6 @@
         {
           "Name": "Cache-Control",
           "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-QfgENv7L2dcNcRXPjXKE8JS8L2ycCHzdq0YgiN/k7HU="
-        }
-      ]
-    },
-    {
-      "Route": "_framework/BlazorApp-empty1.pdb",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-18e90mra76.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000056734370"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17625"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3f0Y6XdaZJH6h5bM65vq4nxaQYJnkQFeAqddb2l+Z58=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -10234,19 +10234,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"QfgENv7L2dcNcRXPjXKE8JS8L2ycCHzdq0YgiN/k7HU=\""
+          "Value": "W/\"CIp5S7M2+Gla8LVpgf7PaUv28rkasJUKJsLNDgv3v1E=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QfgENv7L2dcNcRXPjXKE8JS8L2ycCHzdq0YgiN/k7HU="
+          "Value": "sha256-CIp5S7M2+Gla8LVpgf7PaUv28rkasJUKJsLNDgv3v1E="
         }
       ]
     },
     {
       "Route": "_framework/BlazorApp-empty1.pdb.gz",
-      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-18e90mra76.gz",
+      "AssetFile": "C:\\Users\\allsc\\Desktop\\Учеба\\ларионов\\Cultura\\src\\Cultura_New\\BlazorApp-empty1\\obj\\Debug\\net6.0\\compressed\\qqm9qs3ym9-49859uf0uk.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -10255,7 +10255,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17625"
+          "Value": "17628"
         },
         {
           "Name": "Content-Type",
@@ -10263,11 +10263,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3f0Y6XdaZJH6h5bM65vq4nxaQYJnkQFeAqddb2l+Z58=\""
+          "Value": "\"Ohrbr6Ovjsx9oPZQyqkdx4tsh144kDhCsoxoFKU5U84=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 10:27:54 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10285,7 +10285,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3f0Y6XdaZJH6h5bM65vq4nxaQYJnkQFeAqddb2l+Z58="
+          "Value": "sha256-Ohrbr6Ovjsx9oPZQyqkdx4tsh144kDhCsoxoFKU5U84="
         }
       ]
     },
@@ -10351,7 +10351,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:33:41 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10404,7 +10404,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:33:41 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10488,7 +10488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:33:41 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10541,7 +10541,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:33:41 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:16 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10625,7 +10625,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:27:10 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10678,7 +10678,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:27:10 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10762,7 +10762,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:27:10 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -10815,7 +10815,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 26 Dec 2024 09:27:10 GMT"
+          "Value": "Thu, 26 Dec 2024 10:49:15 GMT"
         },
         {
           "Name": "Cache-Control",
