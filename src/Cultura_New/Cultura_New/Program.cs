@@ -1,19 +1,18 @@
-using BusinessLogic.Authorization;
-using BusinessLogic.Helpers;
-using BusinessLogic.Services;
-using Cultura_New.Authorization;
-using Cultura_New.Helpers;
-using DataAccess.Wrapper;
 using Domain.Interfaces;
+using BusinessLogic.Services;
+using Domain.Models;
+using DataAccess.Wrapper;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using DataAccess.Models;
+using BusinessLogic.Helpers;
+using Cultura_New.Authorization;
+using BusinessLogic.Authorization;
+using Microsoft.OpenApi.Models;
 using Mapster;
 using MapsterMapper;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using System;
-using System.Reflection;
 using System.Text.Json.Serialization;
-using DataAccess.Models;
+using Cultura_New.Helpers;
 
 
 namespace Cultura_New
@@ -23,19 +22,16 @@ namespace Cultura_New
         public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //��� ��������������� �������� ���������� ��������� ���� ��� ������ ������ / �������
-
-            builder.Services.AddDbContext<Cultura_bdNewContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("CONNECTION_STRING")));
-
-
+            //äëÿ àâòîìàòè÷åñêîãî ñîçäàíèÿ ýêçåìïëÿðà êîíòåêñòà áàçû ïðè êàæäîì âûçîâå / çàïóñêå
+            builder.Services.AddDbContext<Cultura_bdNewContext>(
+                options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
 
             //// configure strongly typed settings object
             builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-            ////Scoped ��������, ��� ���� ��������� ������� ����� �������������� �� ������ HTTP-������. ��� ������, ������ ���
-            ////����������� ����� �������� � ����� ���������� ���� ������, ������� ������ ���� "�����������" � �������� ������
-            ////�������.
+            //Scoped îçíà÷àåò, ÷òî îäèí ýêçåìïëÿð îáúåêòà áóäåò èñïîëüçîâàòüñÿ íà êàæäûé HTTP-çàïðîñ. Ýòî óäîáíî, ïîòîìó ÷òî
+            //ðåïîçèòîðèè ÷àñòî ðàáîòàþò ñ îäíèì êîíòåêñòîì áàçû äàííûõ, êîòîðûé äîëæåí áûòü "ðàçäåëÿåìûì" â ïðåäåëàõ îäíîãî
+            //çàïðîñà.
             builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
@@ -65,16 +61,16 @@ namespace Cultura_New
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "API ���������� ������������� � ���������� �������",
-                    Description = "API ��� ���������� �������������, ��������� � ��������� � ���������� �������.",
+                    Title = "API óïðàâëåíèÿ ìåðîïðèÿòèÿìè â êóëüòóðíûõ öåíòðàõ",
+                    Description = "API äëÿ óïðàâëåíèÿ ìåðîïðèÿòèÿìè, ñîáûòèÿìè è ðåñóðñàìè â êóëüòóðíûõ öåíòðàõ.",
                     Contact = new OpenApiContact
                     {
-                        Name = "������� ��������� API",
+                        Name = "Êîìàíäà ïîääåðæêè API",
                         Url = new Uri("https://example.com/support")
                     },
                     License = new OpenApiLicense
                     {
-                        Name = "�������� �� ������������� API",
+                        Name = "Ëèöåíçèÿ íà èñïîëüçîâàíèå API",
                         Url = new Uri("https://example.com/license")
                     }
                 });
