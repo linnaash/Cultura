@@ -34,8 +34,9 @@ namespace Cultura_New
                           .AllowAnyMethod();
                 });
             });
-            builder.Services.AddDbContext<Cultura_bdNewContext>(
-                options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
+            builder.Services.AddDbContext<Cultura_bdNewContext>(options =>
+    options.UseSqlServer("Server=DESKTOP-E1QR638;Database=Cultura_bdNew;User Id=sa;Password=12345;"));
+
 
             //// configure strongly typed settings object
             builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
@@ -123,7 +124,7 @@ namespace Cultura_New
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdNewContext>();
-                await context.Database.MigrateAsync();
+                //await context.Database.MigrateAsync();
                 if (app.Environment.IsDevelopment())
                 {
                     app.UseSwagger();

@@ -2,7 +2,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "GetAll",
-    "RelativePath": "Accounts",
+    "RelativePath": "api/Accounts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "Create",
-    "RelativePath": "Accounts",
+    "RelativePath": "api/Accounts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +48,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "GetById",
-    "RelativePath": "Accounts/{id}",
+    "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -74,7 +74,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "Update",
-    "RelativePath": "Accounts/{id}",
+    "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -105,7 +105,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "Delete",
-    "RelativePath": "Accounts/{id}",
+    "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -121,7 +121,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "Authenticate",
-    "RelativePath": "Accounts/authenticate",
+    "RelativePath": "api/Accounts/authenticate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -147,7 +147,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "ForgotPassword",
-    "RelativePath": "Accounts/forgot-password",
+    "RelativePath": "api/Accounts/forgot-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -163,7 +163,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "RefreshToken",
-    "RelativePath": "Accounts/refresh-token",
+    "RelativePath": "api/Accounts/refresh-token",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -183,7 +183,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "Register",
-    "RelativePath": "Accounts/register",
+    "RelativePath": "api/Accounts/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -199,7 +199,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "ResetPassword",
-    "RelativePath": "Accounts/reset-password",
+    "RelativePath": "api/Accounts/reset-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -215,7 +215,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "RevokeToken",
-    "RelativePath": "Accounts/revoke-token",
+    "RelativePath": "api/Accounts/revoke-token",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -231,7 +231,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "ValidateResetToken",
-    "RelativePath": "Accounts/validate-reset-token",
+    "RelativePath": "api/Accounts/validate-reset-token",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -247,7 +247,7 @@
   {
     "ContainingType": "Cultura_New.Controllers.AccountsController",
     "Method": "VerifyEmail",
-    "RelativePath": "Accounts/verify-email",
+    "RelativePath": "api/Accounts/verify-email",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
