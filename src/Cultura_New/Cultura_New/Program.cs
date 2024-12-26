@@ -112,7 +112,11 @@ namespace Cultura_New
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdNewContext>();
-                await context.Database.MigrateAsync();
+                if ((await context.Database.GetPendingMigrationsAsync()).Any())
+                {
+                    await context.Database.MigrateAsync();
+                }
+
                 if (app.Environment.IsDevelopment())
                 {
                     app.UseSwagger();

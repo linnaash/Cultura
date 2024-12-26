@@ -24,42 +24,42 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .auth-form div {
-        margin-bottom: 15px;
-    }
+        .auth-form div {
+            margin-bottom: 15px;
+        }
 
-    .auth-form input {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-top: 5px;
-    }
+        .auth-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
 
-    .auth-form button {
-        width: 100%;
-        padding: 10px;
-        background-color: orange;
-        border: none;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
+        .auth-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: orange;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-    .auth-form button:hover {
-        background-color: darkorange;
-    }
+            .auth-form button:hover {
+                background-color: darkorange;
+            }
 
-    .auth-form .login-link {
-        margin-top: 10px;
-        font-size: 14px;
-    }
+        .auth-form .login-link {
+            margin-top: 10px;
+            font-size: 14px;
+        }
 
-    .auth-form .login-link a {
-        color: blue;
-        text-decoration: none;
-    }
+            .auth-form .login-link a {
+                color: blue;
+                text-decoration: none;
+            }
 </style>
 
 <div class="auth-container">
@@ -71,12 +71,12 @@
 
         <div class="auth-form">
             <div>
-                <label>Email</label>
-                <InputText @bind="authenticateRequest.Email" placeholder="Введите ваш email" />
+                <label for="email">Email</label>
+                <InputText @bind="authenticateRequest.Email" id="email" placeholder="Введите ваш email" />
             </div>
             <div>
-                <label>Пароль</label>
-                <InputPassword @bind="authenticateRequest.Password" placeholder="Введите пароль" />
+                <label for="password">Пароль</label>
+                <InputPassword @bind="authenticateRequest.Password" id="password" placeholder="Введите пароль" />
             </div>
             <button type="submit">Войти</button>
         </div>
@@ -86,6 +86,7 @@
         <p>Не зарегистрированы? <a href="/register">Зарегистрироваться</a></p>
     </div>
 </div>
+
 @code {
     private AuthenticateRequest authenticateRequest = new AuthenticateRequest();
 
@@ -97,39 +98,40 @@
 
             if (response.IsSuccessStatusCode)
             {
-                var authResponse = await response.Content.ReadFromJsonAsync<AuthenticateResponse>();
+                var authResponse = await response.Content.ReadFromJsonAsync<AuthenticateResponse>
+    ();
 
-                if (authResponse != null)
-                {
-                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", authResponse.JwtToken);
-                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "refreshToken", authResponse.RefreshToken);
-                    Navigation.NavigateTo("/dashboard");
-                }
-            }
-            else
-            {
-                Console.WriteLine("Ошибка при входе. Проверьте правильность логина и пароля.");
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Ошибка: {ex.Message}");
-        }
+    if (authResponse != null)
+    {
+    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", authResponse.JwtToken);
+    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "refreshToken", authResponse.RefreshToken);
+    Navigation.NavigateTo("/dashboard");
+    }
+    }
+    else
+    {
+    Console.WriteLine("Ошибка при входе. Проверьте правильность логина и пароля.");
+    }
+    }
+    catch (Exception ex)
+    {
+    Console.WriteLine($"Ошибка: {ex.Message}");
+    }
     }
 
     public class AuthenticateRequest
     {
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; }
 
-        [Required]
-        public string Password { get; set; }
+    [Required]
+    public string Password { get; set; }
     }
 
     public class AuthenticateResponse
     {
-        public string JwtToken { get; set; }
-        public string RefreshToken { get; set; }
+    public string JwtToken { get; set; }
+    public string RefreshToken { get; set; }
     }
-}
+    }
