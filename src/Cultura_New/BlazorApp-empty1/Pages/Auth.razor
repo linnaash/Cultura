@@ -1,137 +1,72 @@
 ﻿@page "/auth"
-@inject HttpClient Http
-@inject NavigationManager Navigation
-@inject IJSRuntime JSRuntime
-@using System.ComponentModel.DataAnnotations
+@inject HttpClient Http // Для отправки запросов на @* сервер *@
+@inject IJSRuntime JSRuntime // Для работы с localStorage
+@inject NavigationManager Navigation // Для навигации на другие @* страницы *@
+@using System.ComponentModel.DataAnnotations @* // Для проверки данных формы *@
 
-@* Стили для центрирования формы *@
-<style>
-    .auth-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-    }
-
-    .auth-form {
-        width: 100%;
-        max-width: 400px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-        .auth-form div {
-            margin-bottom: 15px;
-        }
-
-        .auth-form input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-top: 5px;
-        }
-
-        .auth-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: orange;
-            border: none;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-            .auth-form button:hover {
-                background-color: darkorange;
-            }
-
-        .auth-form .login-link {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-            .auth-form .login-link a {
-                color: blue;
-                text-decoration: none;
-            }
-</style>
-
-<div class="auth-container">
-    <h3>Вход</h3>
-
-    <EditForm Model="@authenticateRequest" OnValidSubmit="HandleLogin">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
-
-        <div class="auth-form">
-            <div>
-                <label for="email">Email</label>
-                <InputText @bind="authenticateRequest.Email" id="email" placeholder="Введите ваш email" />
-            </div>
-            <div>
-                <label for="password">Пароль</label>
-                <InputPassword @bind="authenticateRequest.Password" id="password" placeholder="Введите пароль" />
-            </div>
-            <button type="submit">Войти</button>
-        </div>
-    </EditForm>
-
-    <div class="login-link">
-        <p>Не зарегистрированы? <a href="/register">Зарегистрироваться</a></p>
-    </div>
+<div>
+    <label for="email">Логин:</label>
+    <input id="email" type="text" placeholder="Введите логин" @bind="authenticateRequest.Email" />
 </div>
+<div>
+    <label for="password">Пароль:</label>
+    <input id="password" type="password" placeholder="Введите пароль" @bind="authenticateRequest.Password" />
+</div>
+<button @onclick="HandleLogin">Войти</button>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p style="color: red;">@errorMessage</p>
+}
 
 @code {
+    // Модель для ввода данных
     private AuthenticateRequest authenticateRequest = new AuthenticateRequest();
+    private string errorMessage; // Для показа ошибок
 
+    // Метод для отправки данных на сервер
     private async Task HandleLogin()
     {
         try
         {
-            var response = await Http.PostAsJsonAsync("api/Account/authenticate", authenticateRequest);
+            var response = await Http.PostAsJsonAsync("api/Accounts/Authenticate", authenticateRequest);
 
             if (response.IsSuccessStatusCode)
             {
-                var authResponse = await response.Content.ReadFromJsonAsync<AuthenticateResponse>
-    ();
+                // Успешный вход
+                var authResponse = await response.Content.ReadFromJsonAsync<AuthenticateResponse>();
+                Console.WriteLine($"JWT: {authResponse.JwtToken}"); // Просто вывод для проверки
 
-    if (authResponse != null)
-    {
-    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", authResponse.JwtToken);
-    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "refreshToken", authResponse.RefreshToken);
-    Navigation.NavigateTo("/dashboard");
-    }
-    }
-    else
-    {
-    Console.WriteLine("Ошибка при входе. Проверьте правильность логина и пароля.");
-    }
-    }
-    catch (Exception ex)
-    {
-    Console.WriteLine($"Ошибка: {ex.Message}");
-    }
+                // Сохраняем токен в localStorage
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", authResponse.JwtToken);
+
+                // Переходим на другую страницу
+                Navigation.NavigateTo("/dashboard");
+            }
+            else
+            {
+                errorMessage = "Неправильный логин или пароль.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Ошибка: {ex.Message}";
+        }
     }
 
+    // Вспомогательные классы
     public class AuthenticateRequest
     {
-    [Required]
-    [EmailAddress]
-    public string Email { get; set; }
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
 
-    [Required]
-    public string Password { get; set; }
+        [Required]
+        public string Password { get; set; }
     }
 
     public class AuthenticateResponse
     {
-    public string JwtToken { get; set; }
-    public string RefreshToken { get; set; }
+        public string JwtToken { get; set; }
     }
-    }
+}

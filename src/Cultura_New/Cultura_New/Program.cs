@@ -23,6 +23,17 @@ namespace Cultura_New
         {
             var builder = WebApplication.CreateBuilder(args);
             //äëÿ àâòîìàòè÷åñêîãî ñîçäàíèÿ ýêçåìïëÿðà êîíòåêñòà áàçû ïðè êàæäîì âûçîâå / çàïóñêå
+            
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin", policy =>
+                {
+                    policy.WithOrigins("https://localhost:7214/auth")  // ваш клиентский URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                });
+            });
             builder.Services.AddDbContext<Cultura_bdNewContext>(
                 options => options.UseSqlServer(builder.Configuration["CONNECTION_STRING"]));
 
@@ -112,11 +123,7 @@ namespace Cultura_New
             {
                 var services = scope.ServiceProvider;
                 var context = services.GetRequiredService<Cultura_bdNewContext>();
-                if ((await context.Database.GetPendingMigrationsAsync()).Any())
-                {
-                    await context.Database.MigrateAsync();
-                }
-
+                await context.Database.MigrateAsync();
                 if (app.Environment.IsDevelopment())
                 {
                     app.UseSwagger();
@@ -126,7 +133,7 @@ namespace Cultura_New
                  .AllowAnyHeader()
                  .AllowAnyMethod());
 
-
+                app.UseCors("AllowLocalhost");
 
                 app.UseHttpsRedirection();
 
