@@ -29,7 +29,7 @@ namespace Cultura_New
             {
                 options.AddPolicy("AllowSpecificOrigin", policy =>
                 {
-                    policy.WithOrigins("https://localhost:7214/auth")  // ваш клиентский URL
+                    policy.WithOrigins("https://clientforculturawebapi-y5bxc2o4.b4a.run")  // ваш клиентский URL
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                 });
