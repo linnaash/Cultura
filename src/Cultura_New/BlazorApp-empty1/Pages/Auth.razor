@@ -1,4 +1,8 @@
 ﻿@page "/auth"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+@using System.ComponentModel.DataAnnotations
 
 @* Стили для центрирования формы *@
 <style>
@@ -59,21 +63,73 @@
 </style>
 
 <div class="auth-container">
-    <h3>Регистрация</h3>
+    <h3>Вход</h3>
 
-    <form class="auth-form">
-        <div>
-            <label>Email</label>
-            <input type="email" placeholder="Введите ваш email" />
+    <EditForm Model="@authenticateRequest" OnValidSubmit="HandleLogin">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="auth-form">
+            <div>
+                <label>Email</label>
+                <InputText @bind="authenticateRequest.Email" placeholder="Введите ваш email" />
+            </div>
+            <div>
+                <label>Пароль</label>
+                <InputPassword @bind="authenticateRequest.Password" placeholder="Введите пароль" />
+            </div>
+            <button type="submit">Войти</button>
         </div>
-        <div>
-            <label>Пароль</label>
-            <input type="password" placeholder="Введите пароль" />
-        </div>
-        <button type="submit">Войти</button>
-    </form>
+    </EditForm>
 
     <div class="login-link">
-        <p>Не зарегистрированы? <a href="/auth">Зарегистрироваться</a></p>
+        <p>Не зарегистрированы? <a href="/register">Зарегистрироваться</a></p>
     </div>
 </div>
+@code {
+    private AuthenticateRequest authenticateRequest = new AuthenticateRequest();
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/Account/authenticate", authenticateRequest);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var authResponse = await response.Content.ReadFromJsonAsync<AuthenticateResponse>();
+
+                if (authResponse != null)
+                {
+                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "authToken", authResponse.JwtToken);
+                    await JSRuntime.InvokeVoidAsync("localStorage.setItem", "refreshToken", authResponse.RefreshToken);
+                    Navigation.NavigateTo("/dashboard");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Ошибка при входе. Проверьте правильность логина и пароля.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ошибка: {ex.Message}");
+        }
+    }
+
+    public class AuthenticateRequest
+    {
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+    }
+
+    public class AuthenticateResponse
+    {
+        public string JwtToken { get; set; }
+        public string RefreshToken { get; set; }
+    }
+}

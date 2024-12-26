@@ -118,7 +118,7 @@ namespace Cultura_New
                     app.UseSwagger();
                     app.UseSwaggerUI();
                 }
-                app.UseCors(builder => builder.WithOrigins(new[] { "https://localhost:7214/users" })
+                app.UseCors(builder => builder.WithOrigins(new[] { "https://clientforculturawebapi-y5bxc2o4.b4a.run" })
                  .AllowAnyHeader()
                  .AllowAnyMethod());
 

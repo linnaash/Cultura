@@ -7,7 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\Auth.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Dockerfile" />
     <None Remove="wwwroot\Resources\painter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Dockerfile">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Pages\Auth.razor">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-    </Content>
     <Content Update="wwwroot\Resources\app-development.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
